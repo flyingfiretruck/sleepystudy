@@ -4,10 +4,10 @@ const path = require('path');
 
 const port = 3000;
 
-// app.engine('html', require('ejs').renderFile);
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
-app.use(express.static(path.join(__dirname, '..')));
+app.use(express.static(path.join(__dirname, '../')));
 
 
 app.use('/', (req, res) => {
