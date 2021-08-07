@@ -4,7 +4,7 @@ function Landing() {
   return (
     <div className="landing">
       <h1 className="intro">Welcome to Sleepy Study!</h1>
-      <img src="../assets/connect.svg" alt="connection"></img>
+      <img className="connection" src="../assets/connect.svg" alt="connection"></img>
       <p className="intro-paragraph-1">
         Did you know you might be able to learn while you sleep?
         There has been multiple studies demonstarting people's ability
@@ -19,6 +19,7 @@ function Landing() {
         Will this application really supplement your learning? I can't say for sure.
         But you won't lose anything from trying it out!
       </p>
+      <img className="studying" src="../assets/studying.svg" alt="studying"></img>
     </div>
   )
 }
