@@ -4,6 +4,7 @@ import { useMediaQuery } from "react-responsive";
 import Navbar from './components/Navbar.jsx';
 import Landing from './components/Landing.jsx';
 import Playlist from './components/Playlist.jsx';
+import Video from './components/Video.jsx';
 
 
 const App = () => (
@@ -13,6 +14,9 @@ const App = () => (
       <Switch>
         <Route exact path="/">
           <Landing />
+        </Route>
+        <Route exact path="/video">
+          <Video />
         </Route>
         <Route exact path="/playlist">
           <Playlist />

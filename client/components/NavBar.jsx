@@ -7,9 +7,9 @@ const NavBar = () => (
   <>
     <RB.Navbar bg="dark" variant="dark" sticky="top">
       <RB.Container>
-        <RB.Navbar.Header href="/">Sleepy Study</RB.Navbar.Brand>
+        <RB.Navbar.Brand href="/">Sleepy Study</RB.Navbar.Brand>
         <RB.Nav className="me-auto">
-          {/* <RB.Nav.Link href="/video">Video</RB.Nav.Link> */}
+          <RB.Nav.Link href="/video">Video</RB.Nav.Link>
           <RB.Nav.Link href="/playlist">Playlist</RB.Nav.Link>
         </RB.Nav>
       </RB.Container>
