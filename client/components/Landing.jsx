@@ -3,8 +3,8 @@ import { Button, Image } from "react-bootstrap";
 
 const Landing = () => (
   <div className="landing">
-    <Image className="connection-image" src="../assets/connection.svg" alt="connection"/>
-    <p className="intro-paragraph">
+    <Image className="connection-image" src="../assets/connection.svg" alt="connection" />
+    <p className="animate__animated animate__bounce intro-paragraph">
       Did you know you might be able to learn while you sleep?
       There has been multiple studies demonstarting people's ability
       to learn while they are asleep, in a basic learning form called conditioning.
