@@ -8,13 +8,13 @@ import Playlist from './components/Playlist.jsx';
 
 const App = () => (
   <>
-    <Navbar />
     <BrowserRouter>
+      <Navbar />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <Landing />
         </Route>
-        <Route path="/playlist">
+        <Route exact path="/playlist">
           <Playlist />
         </Route>
       </Switch>
