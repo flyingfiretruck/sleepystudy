@@ -9,8 +9,8 @@ const NavBar = () => (
       <RB.Container>
         <RB.Navbar.Brand href="/">Sleepy Study</RB.Navbar.Brand>
         <RB.Nav className="me-auto">
-          <RB.Nav.Link href="video">Video</RB.Nav.Link>
-          <RB.Nav.Link href="playlist">Playlist</RB.Nav.Link>
+          {/* <RB.Nav.Link href="/video">Video</RB.Nav.Link> */}
+          <RB.Nav.Link href="/playlist">Playlist</RB.Nav.Link>
         </RB.Nav>
       </RB.Container>
     </RB.Navbar>

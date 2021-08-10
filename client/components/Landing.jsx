@@ -16,7 +16,7 @@ const Landing = () => (
     </p>
     <Button variant="primary" className="btn-primary">
     Large button
-  </Button>
+    </Button>
     <div className="p3">
       <p className="intro-paragraph">
         Will this application really supplement your learning? I can't say for sure.
