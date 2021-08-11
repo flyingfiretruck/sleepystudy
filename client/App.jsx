@@ -22,7 +22,6 @@ const App = () => (
           <Playlist />
         </Route>
       </Switch>
-      <Footer/>
     </BrowserRouter>
   </>
 );
