@@ -4,3 +4,6 @@
 .navbar-dark .navbar-brand {
   font-size: xx-large;
 }
+#root {
+  margin: 0;
+}
