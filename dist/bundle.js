@@ -292,7 +292,11 @@ var Landing = function Landing() {
   }, "These studies had their subjects listen to different recordings while they were under REM sleep. Replicating the conditions of these experiments, this application allows you to listen to Youtube tutorials while you are asleep."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "intro-paragraph",
     "data-aos": "fade-up"
-  }, "Will this application really supplement your learning? I can't say for sure. But you won't lose anything from trying it out!")));
+  }, "Will this application really supplement your learning? I can't say for sure. But you won't lose anything from trying it out!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+    className: "sleeping-image",
+    src: "../assets/sleeping.svg",
+    alt: "sleeping"
+  }));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Landing);
@@ -508,7 +512,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  font-size: 1.235em;\n  font-family: 'FrankRuhlLibre-Bold';\n}\n.landing {\n  background-color: #F7EBEB\n}\n.intro-paragraph {\n  padding: 3.5em;\n  margin: 0vh;\n}\n@font-face {\n  font-family: FrankRuhlLibre-Bold;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"opentype\");\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/landing.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,kCAAkC;AACpC;AACA;EACE;AACF;AACA;EACE,cAAc;EACd,WAAW;AACb;AACA;EACE,gCAAgC;EAChC,+DAAmE;AACrE","sourcesContent":["* {\n  font-size: 1.235em;\n  font-family: 'FrankRuhlLibre-Bold';\n}\n.landing {\n  background-color: #F7EBEB\n}\n.intro-paragraph {\n  padding: 3.5em;\n  margin: 0vh;\n}\n@font-face {\n  font-family: FrankRuhlLibre-Bold;\n  src: url(\"../../assets/FrankRuhlLibre-Bold.ttf\") format(\"opentype\");\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  font-size: 1.235em;\n  font-family: 'FrankRuhlLibre-Bold';\n}\n.landing {\n  background-color: #F7EBEB\n}\n.intro-paragraph {\n  padding: 3.5em;\n  margin: 0vh;\n}\n.studying-image {\n  width: 40rem;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n/* .sleeping-image {\n  width: 100vh;\n} */\n@font-face {\n  font-family: FrankRuhlLibre-Bold;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"opentype\");\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/landing.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,kCAAkC;AACpC;AACA;EACE;AACF;AACA;EACE,cAAc;EACd,WAAW;AACb;AACA;EACE,YAAY;EACZ,cAAc;EACd,iBAAiB;EACjB,kBAAkB;AACpB;AACA;;GAEG;AACH;EACE,gCAAgC;EAChC,+DAAmE;AACrE","sourcesContent":["* {\n  font-size: 1.235em;\n  font-family: 'FrankRuhlLibre-Bold';\n}\n.landing {\n  background-color: #F7EBEB\n}\n.intro-paragraph {\n  padding: 3.5em;\n  margin: 0vh;\n}\n.studying-image {\n  width: 40rem;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n/* .sleeping-image {\n  width: 100vh;\n} */\n@font-face {\n  font-family: FrankRuhlLibre-Bold;\n  src: url(\"../../assets/FrankRuhlLibre-Bold.ttf\") format(\"opentype\");\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

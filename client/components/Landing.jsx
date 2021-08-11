@@ -27,6 +27,7 @@ const Landing = () => {
               But you won't lose anything from trying it out!
           </p>
       </div>
+      <Image className="sleeping-image" src="../assets/sleeping.svg" alt="sleeping" />
     </div>
   );
 };
