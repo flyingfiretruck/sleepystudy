@@ -5,7 +5,7 @@ import Navbar from './components/Navbar.jsx';
 import Landing from './components/Landing.jsx';
 import Playlist from './components/Playlist.jsx';
 import Video from './components/Video.jsx';
-
+import Footer from './components/Footer.jsx';
 
 const App = () => (
   <>
@@ -22,6 +22,7 @@ const App = () => (
           <Playlist />
         </Route>
       </Switch>
+      <Footer/>
     </BrowserRouter>
   </>
 );

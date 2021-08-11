@@ -5,7 +5,7 @@ import { useMediaQuery } from "react-responsive";
 
 const NavBar = () => (
   <>
-    <RB.Navbar bg="dark" variant="dark" sticky="top">
+    <RB.Navbar sticky="top">
       <RB.Container>
         <RB.Navbar.Brand href="/">Sleepy Study</RB.Navbar.Brand>
         <RB.Nav className="me-auto">

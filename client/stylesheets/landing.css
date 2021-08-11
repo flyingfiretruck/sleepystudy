@@ -1,9 +1,13 @@
-.landing {
-  background-color: #F7EBEB
-}
 * {
   font-size: larger;
   font-family: 'FrankRuhlLibre-Bold';
+}
+.landing {
+  background-color: #F7EBEB
+}
+.intro-paragraph {
+  padding: 5vh;
+  margin: 0vh;
 }
 @font-face {
   font-family: FrankRuhlLibre-Bold;
