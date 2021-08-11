@@ -22,12 +22,10 @@ const Landing = () => {
             Replicating the conditions of these experiments, this application allows you to listen to
             Youtube tutorials while you are asleep.
           </p>
-          <div className="p3">
-            <p className="intro-paragraph" data-aos="fade-up">
-                Will this application really supplement your learning? I can't say for sure.
-                But you won't lose anything from trying it out!
-            </p>
-          </div>
+          <p className="intro-paragraph" data-aos="fade-up">
+              Will this application really supplement your learning? I can't say for sure.
+              But you won't lose anything from trying it out!
+          </p>
       </div>
     </div>
   );

@@ -1,12 +1,12 @@
 * {
-  font-size: larger;
+  font-size: 1.235em;
   font-family: 'FrankRuhlLibre-Bold';
 }
 .landing {
   background-color: #F7EBEB
 }
 .intro-paragraph {
-  padding: 5vh;
+  padding: 3.5em;
   margin: 0vh;
 }
 @font-face {
