@@ -207,7 +207,7 @@ var App = function App() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Video_jsx__WEBPACK_IMPORTED_MODULE_4__.default, null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__.Route, {
     exact: true,
     path: "/playlist"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Playlist_jsx__WEBPACK_IMPORTED_MODULE_3__.default, null)))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Playlist_jsx__WEBPACK_IMPORTED_MODULE_3__.default, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_Footer_jsx__WEBPACK_IMPORTED_MODULE_5__.default, null)));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
@@ -233,7 +233,7 @@ var Footer = function Footer() {
     className: "footer"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "company info"
-  }, "Manyfast inc.")));
+  })));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
@@ -282,17 +282,21 @@ var Landing = function Landing() {
     className: "intro-paragraph",
     "data-aos": "fade-up",
     "data-aos-offset": "200"
-  }, "Did you know you might be able to learn while you sleep? There has been multiple studies demonstarting people's ability to learn while they are asleep, in a basic learning form called conditioning."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "Did you know you might be able to learn while you sleep? ")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "intro-paragraph",
+    "data-aos": "fade-up",
+    "data-aos-offset": "200"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "There has been multiple studies demonstarting people's ability"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "to learn while they are asleep, in a basic learning form called conditioning.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
     className: "studying-image",
     src: "../assets/studying.svg",
     alt: "studying"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "intro-paragraph",
     "data-aos": "fade-up"
-  }, "These studies had their subjects listen to different recordings while they were under REM sleep. Replicating the conditions of these experiments, this application allows you to listen to Youtube tutorials while you are asleep."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "These studies had their subjects listen to different recordings while they were under REM sleep. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "Replicating the conditions of these experiments, this application allows you to listen to "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "Youtube tutorials while you are asleep.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "intro-paragraph",
     "data-aos": "fade-up"
-  }, "Will this application really supplement your learning? I can't say for sure. But you won't lose anything from trying it out!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "Will this application really supplement your learning? I can't say for sure."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "But you won't lose anything from trying it out!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
     className: "sleeping-image",
     src: "../assets/sleeping.svg",
     alt: "sleeping"
@@ -480,7 +484,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".footer {\n  padding: 10vh;\n  background-color: #d0c5ff;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/footer.css"],"names":[],"mappings":"AAAA;EACE,aAAa;EACb,yBAAyB;AAC3B","sourcesContent":[".footer {\n  padding: 10vh;\n  background-color: #d0c5ff;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".footer {\n  z-index: 1;\n  bottom: 1vh;\n  right: 2.5vh;\n  position: fixed;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/footer.css"],"names":[],"mappings":"AAAA;EACE,UAAU;EACV,WAAW;EACX,YAAY;EACZ,eAAe;AACjB","sourcesContent":[".footer {\n  z-index: 1;\n  bottom: 1vh;\n  right: 2.5vh;\n  position: fixed;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -512,7 +516,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "* {\n  font-size: 1.235em;\n  font-family: 'FrankRuhlLibre-Bold';\n}\n.landing {\n  background-color: #F7EBEB\n}\n.intro-paragraph {\n  padding: 3.5em;\n  margin: 0vh;\n}\n.studying-image {\n  width: 40rem;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n@font-face {\n  font-family: FrankRuhlLibre-Bold;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"opentype\");\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/landing.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,kCAAkC;AACpC;AACA;EACE;AACF;AACA;EACE,cAAc;EACd,WAAW;AACb;AACA;EACE,YAAY;EACZ,cAAc;EACd,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,gCAAgC;EAChC,+DAAmE;AACrE","sourcesContent":["* {\n  font-size: 1.235em;\n  font-family: 'FrankRuhlLibre-Bold';\n}\n.landing {\n  background-color: #F7EBEB\n}\n.intro-paragraph {\n  padding: 3.5em;\n  margin: 0vh;\n}\n.studying-image {\n  width: 40rem;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n@font-face {\n  font-family: FrankRuhlLibre-Bold;\n  src: url(\"../../assets/FrankRuhlLibre-Bold.ttf\") format(\"opentype\");\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "* {\n  font-size: 1.235em;\n  font-family: 'FrankRuhlLibre-Bold';\n}\n.landing {\n  background-color: #F7EBEB\n}\n.intro {\n  max-width: 1500px;\n  margin: auto;\n}\n.intro-paragraph {\n  font-size: 1.5em;\n  padding: 5%;\n}\n.studying-image {\n  width: 60%;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\np span {\n  display: block;\n  text-align: center;\n}\n@font-face {\n  font-family: FrankRuhlLibre-Bold;\n  src: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") format(\"opentype\");\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/landing.css"],"names":[],"mappings":"AAAA;EACE,kBAAkB;EAClB,kCAAkC;AACpC;AACA;EACE;AACF;AACA;EACE,iBAAiB;EACjB,YAAY;AACd;AACA;EACE,gBAAgB;EAChB,WAAW;AACb;AACA;EACE,UAAU;EACV,cAAc;EACd,iBAAiB;EACjB,kBAAkB;AACpB;AACA;EACE,cAAc;EACd,kBAAkB;AACpB;AACA;EACE,gCAAgC;EAChC,+DAAmE;AACrE","sourcesContent":["* {\n  font-size: 1.235em;\n  font-family: 'FrankRuhlLibre-Bold';\n}\n.landing {\n  background-color: #F7EBEB\n}\n.intro {\n  max-width: 1500px;\n  margin: auto;\n}\n.intro-paragraph {\n  font-size: 1.5em;\n  padding: 5%;\n}\n.studying-image {\n  width: 60%;\n  display: block;\n  margin-left: auto;\n  margin-right: auto;\n}\np span {\n  display: block;\n  text-align: center;\n}\n@font-face {\n  font-family: FrankRuhlLibre-Bold;\n  src: url(\"../../assets/FrankRuhlLibre-Bold.ttf\") format(\"opentype\");\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -544,7 +548,7 @@ var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\n  left: 2em !important;\n  right: 2em !important;\n}\n.navbar-light .navbar-brand {\n  font-size: 3vh;\n}\n.navbar-light .navbar-toggler-icon {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") !important;\n  size: 5em;\n}\n\n.nav-link {\n  font-size: 4vh;\n}\n\n.navbar-toggler {\n  padding: 0em !important;\n  border: 0px solid transparent !important;\n}\n\n.navbar-toggler-icon {\n  width: 1em !important;\n  height: 1em !important;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/navbar.css"],"names":[],"mappings":"AAAA;EACE,oBAAoB;EACpB,qBAAqB;AACvB;AACA;EACE,cAAc;AAChB;AACA;EACE,oEAA0S;EAC1S,SAAS;AACX;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,uBAAuB;EACvB,wCAAwC;AAC1C;;AAEA;EACE,qBAAqB;EACrB,sBAAsB;AACxB","sourcesContent":[".navbar {\n  left: 2em !important;\n  right: 2em !important;\n}\n.navbar-light .navbar-brand {\n  font-size: 3vh;\n}\n.navbar-light .navbar-toggler-icon {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e\") !important;\n  size: 5em;\n}\n\n.nav-link {\n  font-size: 4vh;\n}\n\n.navbar-toggler {\n  padding: 0em !important;\n  border: 0px solid transparent !important;\n}\n\n.navbar-toggler-icon {\n  width: 1em !important;\n  height: 1em !important;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".navbar {\n  left: 2em !important;\n  right: 2em !important;\n}\n.navbar-light .navbar-brand {\n  font-size: 3vh;\n}\n.navbar-light .navbar-toggler-icon {\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") !important;\n  size: 5em;\n}\n\n.nav-link {\n  font-size: 0.8em;\n}\n\n.navbar-toggler {\n  padding: 0em !important;\n  border: 0px solid transparent !important;\n}\n\n.navbar-toggler-icon {\n  width: 1em !important;\n  height: 1em !important;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/navbar.css"],"names":[],"mappings":"AAAA;EACE,oBAAoB;EACpB,qBAAqB;AACvB;AACA;EACE,cAAc;AAChB;AACA;EACE,oEAA0S;EAC1S,SAAS;AACX;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,uBAAuB;EACvB,wCAAwC;AAC1C;;AAEA;EACE,qBAAqB;EACrB,sBAAsB;AACxB","sourcesContent":[".navbar {\n  left: 2em !important;\n  right: 2em !important;\n}\n.navbar-light .navbar-brand {\n  font-size: 3vh;\n}\n.navbar-light .navbar-toggler-icon {\n  background-image: url(\"data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3e%3cpath stroke=%27rgba%28255, 255, 255, 0.55%29%27 stroke-linecap=%27round%27 stroke-miterlimit=%2710%27 stroke-width=%272%27 d=%27M4 7h22M4 15h22M4 23h22%27/%3e%3c/svg%3e\") !important;\n  size: 5em;\n}\n\n.nav-link {\n  font-size: 0.8em;\n}\n\n.navbar-toggler {\n  padding: 0em !important;\n  border: 0px solid transparent !important;\n}\n\n.navbar-toggler-icon {\n  width: 1em !important;\n  height: 1em !important;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

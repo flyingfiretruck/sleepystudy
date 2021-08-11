@@ -5,17 +5,24 @@
 .landing {
   background-color: #F7EBEB
 }
+.intro {
+  max-width: 1500px;
+  margin: auto;
+}
 .intro-paragraph {
-  padding: 3.5em;
-  margin: 0vh;
+  font-size: 1.5em;
+  padding: 5%;
 }
 .studying-image {
-  width: 40rem;
+  width: 60%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
+p span {
+  display: block;
+  text-align: center;
+}
 @font-face {
   font-family: FrankRuhlLibre-Bold;
   src: url("../../assets/FrankRuhlLibre-Bold.ttf") format("opentype");

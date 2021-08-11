@@ -12,22 +12,24 @@ const Landing = () => {
       <Image className="connection-image" src="../assets/connection.svg" alt="connection" />
       <div className="intro">
           <p className="intro-paragraph" data-aos="fade-up" data-aos-offset="200">
-            Did you know you might be able to learn while you sleep?
-            There has been multiple studies demonstarting people's ability
-            to learn while they are asleep, in a basic learning form called conditioning.
+            <span>Did you know you might be able to learn while you sleep? </span>
+          </p>
+          <p className="intro-paragraph" data-aos="fade-up" data-aos-offset="200">
+            <span>There has been multiple studies demonstarting people's ability</span>
+            <span>to learn while they are asleep, in a basic learning form called conditioning.</span>
           </p>
           <Image className="studying-image" src="../assets/studying.svg" alt="studying"/>
           <p className="intro-paragraph" data-aos="fade-up">
-            These studies had their subjects listen to different recordings while they were under REM sleep.
-            Replicating the conditions of these experiments, this application allows you to listen to
-            Youtube tutorials while you are asleep.
+            <span>These studies had their subjects listen to different recordings while they were under REM sleep. </span>
+            <span>Replicating the conditions of these experiments, this application allows you to listen to </span>
+            <span>Youtube tutorials while you are asleep.</span>
           </p>
           <p className="intro-paragraph" data-aos="fade-up">
-              Will this application really supplement your learning? I can't say for sure.
-              But you won't lose anything from trying it out!
+            <span>Will this application really supplement your learning? I can't say for sure.</span>
+            <span>But you won't lose anything from trying it out!</span>
           </p>
       </div>
-      <Image className="sleeping-image" src="../assets/sleeping.svg" alt="sleeping" />
+      <Image className="sleeping-image" src="../assets/sleeping.svg" alt="sleeping"/>
     </div>
   );
 };

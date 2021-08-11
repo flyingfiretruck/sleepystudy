@@ -1,4 +1,6 @@
 .footer {
-  padding: 10vh;
-  background-color: #d0c5ff;
+  z-index: 1;
+  bottom: 1vh;
+  right: 2.5vh;
+  position: fixed;
 }
