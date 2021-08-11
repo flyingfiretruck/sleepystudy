@@ -236,7 +236,10 @@ __webpack_require__.r(__webpack_exports__);
 var Landing = function Landing() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     aos__WEBPACK_IMPORTED_MODULE_1___default().init({
-      duration: 1500
+      startEvent: 'load',
+      duration: 1500,
+      mirror: true,
+      useClassNames: true
     });
   }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -248,21 +251,19 @@ var Landing = function Landing() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "intro-paragraph",
     "data-aos": "fade-up",
-    "data-aos-anchor": ".other-element"
+    "data-aos-offset": "195"
   }, "Did you know you might be able to learn while you sleep? There has been multiple studies demonstarting people's ability to learn while they are asleep, in a basic learning form called conditioning."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
     className: "studying-image",
     src: "../assets/studying.svg",
     alt: "studying"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "intro-paragraph",
-    "data-aos": "fade-up",
-    "data-aos-anchor": ".other-element"
+    "data-aos": "fade-up"
   }, "These studies had their subjects listen to different recordings while they were under REM sleep. Replicating the conditions of these experiments, this application allows you to listen to Youtube tutorials while you are asleep."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "p3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "intro-paragraph",
-    "data-aos": "fade-up",
-    "data-aos-anchor": ".other-element"
+    "data-aos": "fade-up"
   }, "Will this application really supplement your learning? I can't say for sure. But you won't lose anything from trying it out!")));
 };
 
