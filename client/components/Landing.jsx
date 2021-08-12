@@ -12,20 +12,19 @@ const Landing = () => {
       <Image className="connection-image" src="../assets/connection.svg" alt="connection" />
       <div className="intro">
           <p className="intro-paragraph" data-aos="fade-up" data-aos-offset="200">
-            <span>Did you know you might be able to learn while you sleep? </span>
+            <span>Did you know you might be able to learn while you are asleep? </span>
           </p>
           <p className="intro-paragraph" data-aos="fade-up" data-aos-offset="200">
             <span>There has been multiple studies demonstarting people's ability</span>
             <span>to learn while they are asleep, in a basic learning form called conditioning.</span>
           </p>
-          <Image className="studying-image" src="../assets/studying.svg" alt="studying"/>
+          {/* <Image className="studying-image" src="../assets/studying.svg" alt="studying"/> */}
           <p className="intro-paragraph" data-aos="fade-up">
-            <span>These studies had their subjects listen to different recordings while they were under REM sleep. </span>
-            <span>Replicating the conditions of these experiments, this application allows you to listen to </span>
-            <span>Youtube tutorials while you are asleep.</span>
+            <span>Replicating the conditions of these experiments, this application allows</span>
+            <span>you to listen to tutorials of your choice while you are under REM sleep.</span>
           </p>
           <p className="intro-paragraph" data-aos="fade-up">
-            <span>Will this application really supplement your learning? I can't say for sure.</span>
+            <span>Will this application really supplement your learning? We can't say for sure.</span>
             <span>But you won't lose anything from trying it out!</span>
           </p>
       </div>

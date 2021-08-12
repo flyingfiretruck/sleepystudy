@@ -1,0 +1,15 @@
+.video {
+  background-color: #F7EBEB
+}
+.video-empty-space {
+  padding: 10%;
+}
+.door-image {
+  position: relative;
+  bottom: 0;
+}
+
+.video-description {
+  margin: 5%;
+  font-size: 1.3em;
+}
