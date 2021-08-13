@@ -1,1 +1,1 @@
-# sleepystudy
+# sleepystudy is an application that allows you to study while you are asleep
