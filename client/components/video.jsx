@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image } from "react-bootstrap";
+import { Image, InputGroup, FormControl, Button } from "react-bootstrap";
 import ReactPlayer from 'react-player'
 
 const Video = () => (
@@ -7,6 +7,17 @@ const Video = () => (
     <div className="video-empty-space"></div>
     <div className="video-description">
       <p>Choose a tutorial from Youtube</p>
+    </div>
+    <div className="video-search-bar">
+      <InputGroup className="mb-3">
+        <FormControl placeholder="Search"
+          aria-label="Default"
+          aria-descibedby="inputGroup-sizing-default"
+        />
+        <Button variant="outline-secondary">
+          Search
+        </Button>
+      </InputGroup>
     </div>
     <div className="vido-player">
       <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />

@@ -12,7 +12,7 @@ const Landing = () => {
       <Image className="connection-image" src="../assets/connection.svg" alt="connection" />
       <div className="intro">
           <p className="intro-paragraph" data-aos="fade-up" data-aos-offset="200">
-            <span>Did you know you might be able to learn while you are asleep? </span>
+            <span>Did you know you might be able to learn while you're asleep? </span>
           </p>
           <p className="intro-paragraph" data-aos="fade-up" data-aos-offset="200">
             <span>There has been multiple studies demonstarting people's ability</span>
