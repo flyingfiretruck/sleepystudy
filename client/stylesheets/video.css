@@ -2,14 +2,30 @@
   background-color: #F7EBEB
 }
 .video-empty-space {
-  padding: 10%;
+  padding: 5%;
 }
 .door-image {
   position: relative;
   bottom: 0;
 }
 
+.video-video-search {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.video-player {
+  padding: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
 .video-description {
-  margin: 5%;
+  margin: 2%;
   font-size: 1.3em;
+}
+
+.video-reminder {
+  font-size: 0.75em;
+  margin-bottom:5em;
 }

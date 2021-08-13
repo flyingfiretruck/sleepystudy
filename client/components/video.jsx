@@ -6,10 +6,11 @@ const Video = () => (
   <div className="video">
     <div className="video-empty-space"></div>
     <div className="video-description">
-      <p>Choose a tutorial from Youtube</p>
+      <p>Choose a tutorial.</p>
+      <p className="video-reminder">Remember not to click out of the website!</p>
     </div>
     <div className="video-search-bar">
-      <InputGroup className="mb-3">
+      <InputGroup className="video-video-search">
         <FormControl placeholder="Search"
           aria-label="Default"
           aria-descibedby="inputGroup-sizing-default"
@@ -19,8 +20,8 @@ const Video = () => (
         </Button>
       </InputGroup>
     </div>
-    <div className="vido-player">
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' />
+    <div className="video-player">
+      <ReactPlayer url='https://youtu.be/cfD9Oz_8BwM' width="auto" height='13em'/>
     </div>
     <div className="video-empty-space"></div>
     <Image className="door-image" src="../assets/door2.svg" alt="door" />

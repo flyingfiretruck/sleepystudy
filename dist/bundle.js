@@ -397,10 +397,12 @@ var Video = function Video() {
     className: "video-empty-space"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-description"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Choose a tutorial from Youtube")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Choose a tutorial."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+    className: "video-reminder"
+  }, "Remember not to click out of the website!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-search-bar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
-    className: "mb-3"
+    className: "video-video-search"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
     placeholder: "Search",
     "aria-label": "Default",
@@ -408,9 +410,11 @@ var Video = function Video() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
     variant: "outline-secondary"
   }, "Search"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "vido-player"
+    className: "video-player"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_1__.default, {
-    url: "https://www.youtube.com/watch?v=ysz5S6PUM-U"
+    url: "https://youtu.be/cfD9Oz_8BwM",
+    width: "auto",
+    height: "13em"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-empty-space"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
@@ -602,7 +606,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 10%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-description {\n  margin: 5%;\n  font-size: 1.3em;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/video.css"],"names":[],"mappings":"AAAA;EACE;AACF;AACA;EACE,YAAY;AACd;AACA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,UAAU;EACV,gBAAgB;AAClB","sourcesContent":[".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 10%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-description {\n  margin: 5%;\n  font-size: 1.3em;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n  margin-bottom:5em;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/video.css"],"names":[],"mappings":"AAAA;EACE;AACF;AACA;EACE,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,UAAU;EACV,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;AACnB","sourcesContent":[".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n  margin-bottom:5em;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
