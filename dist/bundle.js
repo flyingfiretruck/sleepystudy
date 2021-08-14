@@ -396,19 +396,23 @@ var Video = function Video() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-empty-space"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "video-empty-space"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-description"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Choose a tutorial."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "Choose a video"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "video-reminder"
   }, "Remember not to click out of the website!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-search-bar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
-    className: "video-video-search"
+    className: "video-search"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
     placeholder: "Search",
-    "aria-label": "Default",
-    "aria-descibedby": "inputGroup-sizing-default"
+    className: "search-bar",
+    "area-label": "Default",
+    "area-descibedby": "inputGroup-sizing-default"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
-    variant: "outline-secondary"
+    className: "search-button",
+    variant: "outline-dark"
   }, "Search"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_1__.default, {
@@ -606,7 +610,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n  margin-bottom:5em;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/video.css"],"names":[],"mappings":"AAAA;EACE;AACF;AACA;EACE,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,UAAU;EACV,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;AACnB","sourcesContent":[".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n  margin-bottom:5em;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/video.css"],"names":[],"mappings":"AAAA;EACE;AACF;AACA;EACE,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,UAAU;EACV,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,kCAAkC;AACpC","sourcesContent":[".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

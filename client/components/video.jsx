@@ -5,17 +5,19 @@ import ReactPlayer from 'react-player'
 const Video = () => (
   <div className="video">
     <div className="video-empty-space"></div>
+    <div className="video-empty-space"></div>
     <div className="video-description">
-      <p>Choose a tutorial.</p>
+      <p>Choose a video</p>
       <p className="video-reminder">Remember not to click out of the website!</p>
     </div>
     <div className="video-search-bar">
-      <InputGroup className="video-video-search">
+      <InputGroup className="video-search">
         <FormControl placeholder="Search"
-          aria-label="Default"
-          aria-descibedby="inputGroup-sizing-default"
+          className="search-bar"
+          area-label="Default"
+          area-descibedby="inputGroup-sizing-default"
         />
-        <Button variant="outline-secondary">
+        <Button className="search-button" variant="outline-dark">
           Search
         </Button>
       </InputGroup>

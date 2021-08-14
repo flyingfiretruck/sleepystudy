@@ -9,7 +9,7 @@
   bottom: 0;
 }
 
-.video-video-search {
+.video-search {
   padding-left: 15%;
   padding-right: 15%;
 }
@@ -27,5 +27,16 @@
 
 .video-reminder {
   font-size: 0.75em;
-  margin-bottom:5em;
+}
+
+.btn {
+  background-color: white !important;
+}
+
+.btn-outline-dark:hover {
+  background-color: #212529 !important;
+}
+
+.search-bar {
+  border: 1px solid black !important;
 }

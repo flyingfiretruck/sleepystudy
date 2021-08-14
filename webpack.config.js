@@ -29,5 +29,7 @@ module.exports = {
     historyApiFallback: true,
   },
   devtool: 'source-map',
-
+  watchOptions: {
+    ignored: /node_modules/,
+  },
 };
