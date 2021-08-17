@@ -386,11 +386,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Button.js");
 /* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/react-bootstrap/esm/Image.js");
 /* harmony import */ var react_player__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-player */ "./node_modules/react-player/lib/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
 
 var Video = function Video() {
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
+      _useState2 = _slicedToArray(_useState, 2),
+      search = _useState2[0],
+      setSearch = _useState2[1];
+
+  var handleChange = function handleChange(e) {
+    setSearch(e.target.value);
+  };
+
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -406,13 +427,17 @@ var Video = function Video() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__.default, {
     className: "video-search"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
+    onChange: handleChange,
     placeholder: "Search",
     className: "search-bar",
     "area-label": "Default",
     "area-descibedby": "inputGroup-sizing-default"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
     className: "search-button",
-    variant: "outline-dark"
+    variant: "outline-dark",
+    onClick: function onClick() {
+      return alert("yass");
+    }
   }, "Search"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_1__.default, {
@@ -420,8 +445,8 @@ var Video = function Video() {
     width: "auto",
     height: "13em"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "video-empty-space"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
+    className: "playlist-no-longin"
+  }, "Login for access to more features"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
     className: "door-image",
     src: "../assets/door2.svg",
     alt: "door"
@@ -610,7 +635,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}", "",{"version":3,"sources":["webpack://./client/stylesheets/video.css"],"names":[],"mappings":"AAAA;EACE;AACF;AACA;EACE,WAAW;AACb;AACA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,UAAU;EACV,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,kCAAkC;AACpC","sourcesContent":[".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n}\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n  min-height: 4em;\n}\n\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.playlist-no-longin {\n  padding: 5%;\n  padding-top: 40%;\n  padding-bottom: 40%;\n  min-height: 4em;\n  text-align: center;\n}\n\n.video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}\n", "",{"version":3,"sources":["webpack://./client/stylesheets/video.css"],"names":[],"mappings":"AAAA;EACE;AACF;AACA;EACE,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,WAAW;EACX,gBAAgB;EAChB,mBAAmB;EACnB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,UAAU;EACV,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,kCAAkC;AACpC","sourcesContent":[".video {\n  background-color: #F7EBEB\n}\n.video-empty-space {\n  padding: 5%;\n  min-height: 4em;\n}\n\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.playlist-no-longin {\n  padding: 5%;\n  padding-top: 40%;\n  padding-bottom: 40%;\n  min-height: 4em;\n  text-align: center;\n}\n\n.video-search {\n  padding-left: 15%;\n  padding-right: 15%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -46061,22 +46086,7 @@ function _setPrototypeOf(o, p) {
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 		__webpack_require__.p = "/dist/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
