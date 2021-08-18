@@ -14,6 +14,6 @@ app.use('/', (req, res) => {
   res.render('index.html')
 })
 
-app.listen(process.env.port, () => {
-  console.log(`Server listening at localhost:${process.env.port}!`);
+app.listen(port, () => {
+  console.log(`Server listening at localhost:${port}!`);
 });

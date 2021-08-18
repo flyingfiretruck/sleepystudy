@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 import { Image, InputGroup, FormControl, Button } from "react-bootstrap";
 import ReactPlayer from 'react-player'
 
 const Video = () => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
+  // const [handleEnter] = useState()
   const handleChange = e => {
     setSearch(e.target.value);
   };
+
   return (
     <div className="video">
       <div className="video-empty-space"></div>
@@ -16,15 +19,15 @@ const Video = () => {
         <p className="video-reminder">Remember not to click out of the website!</p>
       </div>
       <div className="video-search-bar">
-        <InputGroup className="video-search">
+        <InputGroup className="video-search" onSubmit={(e) => this.handleEnter(e)}>
           <FormControl
+            className="search-bar"
             onChange={handleChange}
             placeholder="Search"
-            className="search-bar"
             area-label="Default"
             area-descibedby="inputGroup-sizing-default"
           />
-          <Button className="search-button" variant="outline-dark" onClick={() => alert("yass")}>
+          <Button className="search-button" type="submit" variant="outline-dark">
             Search
           </Button>
         </InputGroup>
