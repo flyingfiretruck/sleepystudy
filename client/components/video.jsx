@@ -1,14 +1,22 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Image, InputGroup, FormControl, Button } from "react-bootstrap";
 import ReactPlayer from 'react-player'
 
 const Video = () => {
   const [search, setSearch] = useState("");
-  // const [handleEnter] = useState()
+  const [results] = useState([]);
+
   const handleChange = e => {
     setSearch(e.target.value);
   };
+  const getResults = (e) => {
+    axios.get(`/search/${search}`)
+      .then((response) => {
+        results = response;
+      })
+      .catch("Error!");
+  }
 
   return (
     <div className="video">
@@ -19,7 +27,7 @@ const Video = () => {
         <p className="video-reminder">Remember not to click out of the website!</p>
       </div>
       <div className="video-search-bar">
-        <InputGroup className="video-search" onSubmit={(e) => this.handleEnter(e)}>
+        <InputGroup className="video-search" onSubmit={(e) => this.getResults(e)}>
           <FormControl
             className="search-bar"
             onChange={handleChange}

@@ -2234,6 +2234,8 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
+
 
 
 
@@ -2243,11 +2245,20 @@ var Video = function Video() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
       search = _useState2[0],
-      setSearch = _useState2[1]; // const [handleEnter] = useState()
+      setSearch = _useState2[1];
 
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+      _useState4 = _slicedToArray(_useState3, 1),
+      results = _useState4[0];
 
   var handleChange = function handleChange(e) {
     setSearch(e.target.value);
+  };
+
+  var getResults = function getResults(e) {
+    axios__WEBPACK_IMPORTED_MODULE_1___default().get("/search/".concat(search)).then(function (response) {
+      response, _readOnlyError("results");
+    })["catch"]("Error!");
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2265,7 +2276,7 @@ var Video = function Video() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__.default, {
     className: "video-search",
     onSubmit: function onSubmit(e) {
-      return _this.handleEnter(e);
+      return _this.getResults(e);
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, {
     className: "search-bar",
