@@ -13,7 +13,7 @@ const Video = () => {
   const getResults = (e) => {
     axios.get(`/search/${search}`)
       .then((response) => {
-        results = response;
+        console.log(response)
       })
       .catch("Error!");
   }

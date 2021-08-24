@@ -2234,8 +2234,6 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
-
 
 
 
@@ -2257,7 +2255,7 @@ var Video = function Video() {
 
   var getResults = function getResults(e) {
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("/search/".concat(search)).then(function (response) {
-      response, _readOnlyError("results");
+      console.log(response);
     })["catch"]("Error!");
   };
 

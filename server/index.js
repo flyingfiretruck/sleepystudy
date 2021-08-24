@@ -19,7 +19,8 @@ app.use('/', (req, res) => {
 app.get('/search', (req, res) => {
   axios.get(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&q=${req}`)
     .then((response) => {
-      res.json(response.items);
+      res.send(response.items);
+      console.log(response.items);
     })
     .catch(err => res.sendStatus(404));
 })
