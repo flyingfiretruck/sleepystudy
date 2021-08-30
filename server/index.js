@@ -16,7 +16,7 @@ app.use('/', (req, res) => {
   res.render('index.html')
 })
 
-app.get('/search', (req, res) => {
+app.get('/video/:term', (req, res) => {
   axios.get(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&q=${req}`)
     .then((response) => {
       res.send(response.items);

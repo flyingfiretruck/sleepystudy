@@ -13,7 +13,7 @@ const Video = () => {
   const getResults = e => {
     e.preventDefault();
     console.log(search)
-    axios.get(`/search/${search}`)
+    axios.get(`/video/${search}`)
       .then((response) => {
         setResults(response);
         console.log(response);
