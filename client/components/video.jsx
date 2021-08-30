@@ -30,17 +30,19 @@ const Video = () => {
         <p className="video-reminder">Remember not to click out of the website!</p>
       </div>
       <div className="video-search-bar">
-        <Form onSubmit={getResults} className="video-search">
-          <FormControl
-            className="search-bar"
-            onChange={handleChange}
-            placeholder="Search"
-            area-label="Default"
-            area-descibedby="inputGroup-sizing-default"
-          />
-          <Button className="search-button" type="submit" variant="outline-dark">
-            Search
-          </Button>
+        <Form onSubmit={getResults}>
+          <InputGroup className="video-search">
+            <FormControl
+              className="search-bar"
+              onChange={handleChange}
+              placeholder="Search"
+              area-label="Default"
+              area-descibedby="inputGroup-sizing-default"
+            />
+            <Button className="search-button" type="submit" variant="outline-dark">
+              Search
+            </Button>
+          </InputGroup>
         </Form>
       </div>
       <div className="video-player">
