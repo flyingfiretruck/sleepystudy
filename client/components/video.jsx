@@ -1,19 +1,22 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { Image, InputGroup, FormControl, Button } from "react-bootstrap";
+import { Image, InputGroup, FormControl, Button, Form } from "react-bootstrap";
 import ReactPlayer from 'react-player'
 
 const Video = () => {
   const [search, setSearch] = useState("");
-  const [results] = useState([]);
+  const [results, setResults] = useState([]);
 
   const handleChange = e => {
     setSearch(e.target.value);
   };
-  const getResults = (e) => {
+  const getResults = e => {
+    e.preventDefault();
+    console.log(search)
     axios.get(`/search/${search}`)
       .then((response) => {
-        console.log(response)
+        setResults(response);
+        console.log(response);
       })
       .catch("Error!");
   }
@@ -27,7 +30,7 @@ const Video = () => {
         <p className="video-reminder">Remember not to click out of the website!</p>
       </div>
       <div className="video-search-bar">
-        <InputGroup className="video-search" onSubmit={(e) => this.getResults(e)}>
+        <Form onSubmit={getResults} className="video-search">
           <FormControl
             className="search-bar"
             onChange={handleChange}
@@ -38,7 +41,7 @@ const Video = () => {
           <Button className="search-button" type="submit" variant="outline-dark">
             Search
           </Button>
-        </InputGroup>
+        </Form>
       </div>
       <div className="video-player">
         <ReactPlayer url='https://youtu.be/cfD9Oz_8BwM' width="auto" height='13em'/>
