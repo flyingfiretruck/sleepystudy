@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 const path = require('path');
-const API_KEY = process.env.REACT_APP_WEATHER_API_KEY;
-
+require('dotenv').config();
+const key = process.env.GOOGLE_KEY;
 const port = 3000;
 
 app.engine('html', require('ejs').renderFile);
@@ -17,10 +17,9 @@ app.use('/', (req, res) => {
 })
 
 app.get('/video/:term', (req, res) => {
-  axios.get(`https://www.googleapis.com/youtube/v3/search?key=${API_KEY}&q=${req}`)
+  axios.get(`https://www.googleapis.com/youtube/v3/search?key=${key}&q=asdf`)
     .then((response) => {
-      res.send(response.items);
-      console.log(response.items);
+      res.json(response.items);
     })
     .catch(err => res.sendStatus(404));
 })

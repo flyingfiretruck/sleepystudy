@@ -2255,11 +2255,11 @@ var Video = function Video() {
 
   var getResults = function getResults(e) {
     e.preventDefault();
-    console.log(search);
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("/video/".concat(search)).then(function (response) {
-      setResults(response);
-      console.log(response);
-    })["catch"]("Error!");
+      setResults(response.data);
+    })["catch"](function (err) {
+      console.log(err);
+    });
   };
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2288,7 +2288,7 @@ var Video = function Video() {
     className: "search-button",
     type: "submit",
     variant: "outline-dark"
-  }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Search")))), results, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
     url: "https://youtu.be/cfD9Oz_8BwM",

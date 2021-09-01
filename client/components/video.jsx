@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Image, InputGroup, FormControl, Button, Form } from "react-bootstrap";
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player';
 
 const Video = () => {
   const [search, setSearch] = useState("");
@@ -12,13 +12,13 @@ const Video = () => {
   };
   const getResults = e => {
     e.preventDefault();
-    console.log(search)
     axios.get(`/video/${search}`)
       .then((response) => {
-        setResults(response);
-        console.log(response);
+        setResults(response.data);
       })
-      .catch("Error!");
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   return (
@@ -45,6 +45,7 @@ const Video = () => {
           </InputGroup>
         </Form>
       </div>
+      { results }
       <div className="video-player">
         <ReactPlayer url='https://youtu.be/cfD9Oz_8BwM' width="auto" height='13em'/>
       </div>
