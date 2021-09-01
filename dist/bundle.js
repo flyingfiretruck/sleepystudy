@@ -2256,7 +2256,7 @@ var Video = function Video() {
   var getResults = function getResults(e) {
     e.preventDefault();
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("/video/".concat(search)).then(function (response) {
-      setResults(response.data);
+      setResults(response.data[0].id.videoId);
     })["catch"](function (err) {
       console.log(err);
     });

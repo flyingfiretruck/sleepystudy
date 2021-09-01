@@ -14,7 +14,7 @@ const Video = () => {
     e.preventDefault();
     axios.get(`/video/${search}`)
       .then((response) => {
-        setResults(response.data);
+        setResults(response.data[0].id.videoId);
       })
       .catch((err) => {
         console.log(err);
