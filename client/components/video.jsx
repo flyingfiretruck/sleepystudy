@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player';
 
 const Video = () => {
   const [search, setSearch] = useState("");
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState();
 
   const handleChange = e => {
     setSearch(e.target.value);
@@ -14,13 +14,14 @@ const Video = () => {
     e.preventDefault();
     axios.get(`/video/${search}`)
       .then((response) => {
-        setResults(response.data[0].id.videoId);
+        setResults(response.data)
       })
       .catch((err) => {
         console.log(err);
       });
   }
 
+  // const list = results.map (video => {video['id']['videoId']})
   return (
     <div className="video">
       <div className="video-empty-space"></div>
@@ -45,7 +46,7 @@ const Video = () => {
           </InputGroup>
         </Form>
       </div>
-      { results }
+      {/* { results } */}
       <div className="video-player">
         <ReactPlayer url='https://youtu.be/cfD9Oz_8BwM' width="auto" height='13em'/>
       </div>

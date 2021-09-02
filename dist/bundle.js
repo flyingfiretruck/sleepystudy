@@ -2244,7 +2244,7 @@ var Video = function Video() {
       search = _useState2[0],
       setSearch = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(),
       _useState4 = _slicedToArray(_useState3, 2),
       results = _useState4[0],
       setResults = _useState4[1];
@@ -2256,11 +2256,12 @@ var Video = function Video() {
   var getResults = function getResults(e) {
     e.preventDefault();
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("/video/".concat(search)).then(function (response) {
-      setResults(response.data[0].id.videoId);
+      setResults(response.data);
     })["catch"](function (err) {
       console.log(err);
     });
-  };
+  }; // const list = results.map (video => {video['id']['videoId']})
+
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video"
@@ -2288,7 +2289,7 @@ var Video = function Video() {
     className: "search-button",
     type: "submit",
     variant: "outline-dark"
-  }, "Search")))), results, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
     url: "https://youtu.be/cfD9Oz_8BwM",
