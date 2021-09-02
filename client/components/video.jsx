@@ -15,13 +15,22 @@ const Video = () => {
     axios.get(`/video/${search}`)
       .then((response) => {
         setResults(response.data)
+        console.log(results)
       })
+      .then(list(results))
       .catch((err) => {
         console.log(err);
       });
   }
-
-  // const list = results.map (video => {video['id']['videoId']})
+  function list (videos) {
+    for (var i = 0; i < videos.length; i++) {
+      return (
+        <div>
+          {videos[i][id][videoId]}
+        </div>
+      )
+    }
+  }
   return (
     <div className="video">
       <div className="video-empty-space"></div>
@@ -46,7 +55,9 @@ const Video = () => {
           </InputGroup>
         </Form>
       </div>
-      {/* { results } */}
+      <div>
+        {list}
+      </div>
       <div className="video-player">
         <ReactPlayer url='https://youtu.be/cfD9Oz_8BwM' width="auto" height='13em'/>
       </div>

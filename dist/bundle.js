@@ -2257,11 +2257,17 @@ var Video = function Video() {
     e.preventDefault();
     axios__WEBPACK_IMPORTED_MODULE_1___default().get("/video/".concat(search)).then(function (response) {
       setResults(response.data);
-    })["catch"](function (err) {
+      console.log(results);
+    }).then(list(results))["catch"](function (err) {
       console.log(err);
     });
-  }; // const list = results.map (video => {video['id']['videoId']})
+  };
 
+  function list(videos) {
+    for (var i = 0; i < videos.length; i++) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, videos[i][id][videoId]);
+    }
+  }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video"
@@ -2289,7 +2295,7 @@ var Video = function Video() {
     className: "search-button",
     type: "submit",
     variant: "outline-dark"
-  }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, list), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
     url: "https://youtu.be/cfD9Oz_8BwM",
