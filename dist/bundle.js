@@ -2293,7 +2293,7 @@ var Video = function Video() {
   }, results ? results.map(function (result) {
     var url = "https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg";
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      className: "result",
+      className: "video-thumbnail",
       src: url
     });
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {

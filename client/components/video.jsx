@@ -51,7 +51,7 @@ const Video = () => {
           results.map(result =>
             {
               var url = "https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg";
-              return <img className="result" src={url} />
+              return <img className="video-thumbnail" src={url} />
             }
           )
           : <div />
