@@ -1,5 +1,5 @@
 .video {
-  background-color: #F7EBEB
+  background-color: #F7EBEB;
 }
 .video-empty-space {
   padding: 5%;
@@ -9,6 +9,12 @@
 .door-image {
   position: relative;
   bottom: 0;
+}
+
+.video-search-window {
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .playlist-no-longin {
@@ -40,12 +46,12 @@
 }
 
 .search-results {
-  font-size: 0.5em;
+  font-size: 15px;
   display: flex;
   flex-direction: column;
-  padding-left: 12.5%;
-  padding-right: 12.5%;
-  padding-top: 7.5%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  margin-top: 7.5%;
 }
 
 .results-video-info {
@@ -58,9 +64,15 @@
   flex-direction: column;
 }
 
+.video-channel {
+  font-size: 1em;
+}
+
 .video-thumbnail {
-  max-width: 35%;
-  padding-right: 5%
+  width: 380px;
+  height: 200px;
+  padding-right: 1em;
+  object-fit: cover;
 }
 
 .btn {
