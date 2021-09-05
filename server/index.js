@@ -11,7 +11,7 @@ app.set('view engine', 'html');
 app.use(express.static(path.join(__dirname, '../')));
 
 app.get('/video/:search', (req, res) => {
-  axios.get(`https://www.googleapis.com/youtube/v3/search?key=${process.env.GOOGLE_KEY}&q=${req.params.search}`)
+  axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&order=searchSortUnspecified&key=${process.env.GOOGLE_KEY}&q=${req.params.search}`)
     .then((response) => {
       res.json(response.data.items)
     })
