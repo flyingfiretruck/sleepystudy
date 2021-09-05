@@ -53,12 +53,17 @@ const Video = () => {
             {
               return (
                 <div className="results-video-info">
-                  <div className="vide-title">
-                    {decode(result['snippet']['title'])}
-                  </div>
                   <img className="video-thumbnail"
                     src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg"}
                   />
+                  <div className="video-text-info">
+                    <div className="video-title">
+                      {decode(result['snippet']['title'])}
+                    </div>
+                    <div className="video-channel">
+                      {decode(result['snippet']['channelTitle'])}
+                    </div>
+                  </div>
                 </div>
               );
             }

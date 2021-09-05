@@ -39,6 +39,31 @@
   font-size: 0.75em;
 }
 
+.search-results {
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.results-video-info {
+  display: flex;
+  padding-top: 5%;
+  padding-bottom: 5%
+}
+
+.video-text-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-thumbnail {
+  max-width: 35%;
+  min-width: 35%;
+  padding-right: 5%
+}
+
 .btn {
   background-color: white !important;
 }
