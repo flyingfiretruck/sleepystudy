@@ -2263,12 +2263,6 @@ var Video = function Video() {
     });
   };
 
-  function list(videos) {
-    for (var i = 0; i < videos.length; i++) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, videos[i][id][videoId]);
-    }
-  }
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -2295,7 +2289,13 @@ var Video = function Video() {
     className: "search-button",
     type: "submit",
     variant: "outline-dark"
-  }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, list), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "search-results"
+  }, results ? results.map(function (result) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "result"
+    }, result['id']['videoId']);
+  }) : 'nothing'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
     url: "https://youtu.be/cfD9Oz_8BwM",
