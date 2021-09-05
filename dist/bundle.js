@@ -2291,15 +2291,13 @@ var Video = function Video() {
   }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "search-results"
   }, results ? results.map(function (result) {
-    var url = "https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg";
-    var title = result['snippet']['title'];
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "results-video-info"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "vide-title"
-    }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+    }, result['snippet']['title']), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
       className: "video-thumbnail",
-      src: url
+      src: "https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg"
     }));
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"

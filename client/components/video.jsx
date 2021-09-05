@@ -50,12 +50,14 @@ const Video = () => {
         {results ?
           results.map(result =>
             {
-              var url = "https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg";
-              var title = result['snippet']['title'];
               return (
                 <div className="results-video-info">
-                  <div className="vide-title">{title}</div>
-                  <img className="video-thumbnail" src={url} />
+                  <div className="vide-title">
+                    {result['snippet']['title']}
+                  </div>
+                  <img className="video-thumbnail"
+                    src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg"}
+                  />
                 </div>
               );
             }
