@@ -15,7 +15,6 @@ const Video = () => {
     axios.get(`/video/${search}`)
       .then((response) => {
         setResults(response.data)
-        console.log(results)
       })
       .then(list(results))
       .catch((err) => {
@@ -54,7 +53,7 @@ const Video = () => {
               {result['id']['videoId']}
             </div>
           )
-          : 'nothing'
+          : <div />
         }
       </div>
       <div className="video-player">
