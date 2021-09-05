@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Image, InputGroup, FormControl, Button, Form } from "react-bootstrap";
 import ReactPlayer from 'react-player';
+import {decode} from 'html-entities';
+
 
 const Video = () => {
   const [search, setSearch] = useState("");
@@ -16,7 +18,6 @@ const Video = () => {
       .then((response) => {
         setResults(response.data)
       })
-      .then(list(results))
       .catch((err) => {
         console.log(err);
       });
@@ -53,7 +54,7 @@ const Video = () => {
               return (
                 <div className="results-video-info">
                   <div className="vide-title">
-                    {result['snippet']['title']}
+                    {decode(result['snippet']['title'])}
                   </div>
                   <img className="video-thumbnail"
                     src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg"}
