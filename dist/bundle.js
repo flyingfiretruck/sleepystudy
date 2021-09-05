@@ -2291,9 +2291,11 @@ var Video = function Video() {
   }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "search-results"
   }, results ? results.map(function (result) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "result"
-    }, result['id']['videoId']);
+    var url = "https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg";
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      className: "result",
+      src: url
+    });
   }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {

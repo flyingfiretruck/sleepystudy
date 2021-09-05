@@ -49,9 +49,10 @@ const Video = () => {
       <div className="search-results">
         {results ?
           results.map(result =>
-            <div className="result">
-              {result['id']['videoId']}
-            </div>
+            {
+              var url = "https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg";
+              return <img className="result" src={url} />
+            }
           )
           : <div />
         }
