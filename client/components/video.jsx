@@ -26,7 +26,6 @@ const Video = () => {
   return (
     <div className="video">
       <div className="video-empty-space"></div>
-      <div className="video-empty-space"></div>
       <div className="video-description">
         <p>Choose a video</p>
         <p className="video-reminder">Remember not to click out of the website!</p>
@@ -54,7 +53,7 @@ const Video = () => {
               return (
                 <div className="results-video-info">
                   <img className="video-thumbnail"
-                    src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/0.jpg"}
+                    src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/mqdefault.jpg"}
                   />
                   <div className="video-text-info">
                     <div className="video-title">

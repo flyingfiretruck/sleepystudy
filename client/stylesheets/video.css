@@ -43,14 +43,14 @@
   font-size: 0.5em;
   display: flex;
   flex-direction: column;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+  padding-top: 7.5%;
 }
 
 .results-video-info {
   display: flex;
-  padding-top: 5%;
-  padding-bottom: 5%
+  padding-bottom: 7.5%
 }
 
 .video-text-info {
@@ -60,7 +60,6 @@
 
 .video-thumbnail {
   max-width: 35%;
-  min-width: 35%;
   padding-right: 5%
 }
 
