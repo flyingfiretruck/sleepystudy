@@ -18,9 +18,6 @@ const App = () => (
         <Route exact path="/video">
           <Video />
         </Route>
-        <Route exact path="/playlist">
-          <Playlist />
-        </Route>
       </Switch>
       <Footer />
     </BrowserRouter>

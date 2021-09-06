@@ -28,8 +28,8 @@ const Video = () => {
       <div className="video-empty-space"></div>
       <div className="video-search-window">
         <div className="video-description">
-          <p>Choose a video</p>
-          <p className="video-reminder">Remember not to click out of the website!</p>
+          <p>What interests you today?</p>
+          <p className="video-reminder">Let's get started.</p>
         </div>
         <div className="video-search-bar">
           <Form onSubmit={getResults}>

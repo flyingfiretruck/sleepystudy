@@ -71,6 +71,8 @@
 .video-thumbnail {
   width: 380px;
   height: 200px;
+  /* width: 320px;
+  height: 180px; */
   padding-right: 1em;
   object-fit: cover;
 }
