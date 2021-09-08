@@ -3,18 +3,21 @@ import axios from 'axios';
 import { Image, InputGroup, FormControl, Button, Form } from "react-bootstrap";
 import ReactPlayer from 'react-player';
 import {decode} from 'html-entities';
+import {Howl, Howler} from 'howler';
 
 
 const Video = () => {
   const [search, setSearch] = useState("");
-  const [results, setResults] = useState();
+  const [results, setResults] = useState([]);
+  const [video, setVideo] = useState('');
+  const [playList, setPlayList] = useState([]);
 
   const handleChange = e => {
     setSearch(e.target.value);
   };
   const getResults = e => {
     e.preventDefault();
-    axios.get(`/video/${search}`)
+    axios.get(`/search/${search}`)
       .then((response) => {
         setResults(response.data)
       })
@@ -28,8 +31,8 @@ const Video = () => {
       <div className="video-empty-space"></div>
       <div className="video-search-window">
         <div className="video-description">
-          <p>What interests you today?</p>
-          <p className="video-reminder">Let's get started.</p>
+          <p>What are you studying tonight?</p>
+          <p className="video-reminder">Look for a tutorial.</p>
         </div>
         <div className="video-search-bar">
           <Form onSubmit={getResults}>
@@ -47,6 +50,13 @@ const Video = () => {
             </InputGroup>
           </Form>
         </div>
+        <div className="video-player">
+          {
+            video ?
+              <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls="true"/>
+            : <div />
+          }
+        </div>
         <div className="search-results">
           {results ?
             results.map(result =>
@@ -55,9 +65,11 @@ const Video = () => {
                   <div className="results-video-info">
                     <img className="video-thumbnail"
                       src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/mqdefault.jpg"}
+                      onClick={() => {setVideo(result['id']['videoId'])}}
                     />
                     <div className="video-text-info">
-                      <div className="video-title">
+                      <div className="video-title"
+                        onClick={() => {setVideo(result['id']['videoId'])}}>
                         {decode(result['snippet']['title'])}
                       </div>
                       <div className="video-channel">
@@ -70,9 +82,6 @@ const Video = () => {
             )
             : <div />
           }
-        </div>
-        <div className="video-player">
-          <ReactPlayer url='https://youtu.be/cfD9Oz_8BwM' width="auto" height='13em'/>
         </div>
         <div className="playlist-no-longin">
           Login for access to more features

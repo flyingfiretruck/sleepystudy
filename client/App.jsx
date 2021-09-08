@@ -12,10 +12,10 @@ const App = () => (
     <BrowserRouter>
       <Navbar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/about">
           <Landing />
         </Route>
-        <Route exact path="/video">
+        <Route exact path="/">
           <Video />
         </Route>
       </Switch>
