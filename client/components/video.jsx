@@ -3,14 +3,15 @@ import axios from 'axios';
 import { Image, InputGroup, FormControl, Button, Form } from "react-bootstrap";
 import ReactPlayer from 'react-player';
 import {decode} from 'html-entities';
-import {Howl, Howler} from 'howler';
+// import {Howl, Howler} from 'howler';
 
 
 const Video = () => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
-  const [video, setVideo] = useState('');
+  const [video, setVideo] = useState("");
   const [playList, setPlayList] = useState([]);
+  const [volume, setVolume] = useState(0);
 
   const handleChange = e => {
     setSearch(e.target.value);
@@ -31,8 +32,19 @@ const Video = () => {
       <div className="video-empty-space"></div>
       <div className="video-search-window">
         <div className="video-description">
-          <p>What are you studying tonight?</p>
-          <p className="video-reminder">Look for a tutorial!</p>
+          {
+            !video ?
+              <div>
+                <p>What are you studying tonight?</p>
+                <p className="video-reminder">Choose a study material.</p>
+              </div>
+            : <div>
+                <p>When will you fall asleep?</p>
+                <p className="video-reminder">In
+                  <Button />
+                minutes!</p>
+              </div>
+          }
         </div>
         <div className="video-search-bar">
           <Form onSubmit={getResults}>
@@ -53,7 +65,7 @@ const Video = () => {
         <div className="video-player">
           {
             video ?
-              <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls="true"/>
+              <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls="true" volume={volume}/>
             : <div />
           }
         </div>
