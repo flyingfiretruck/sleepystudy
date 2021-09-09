@@ -32,7 +32,7 @@ const Video = () => {
       <div className="video-search-window">
         <div className="video-description">
           <p>What are you studying tonight?</p>
-          <p className="video-reminder">Look for a tutorial.</p>
+          <p className="video-reminder">Look for a tutorial!</p>
         </div>
         <div className="video-search-bar">
           <Form onSubmit={getResults}>
