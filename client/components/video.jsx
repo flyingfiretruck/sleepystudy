@@ -12,6 +12,7 @@ const Video = () => {
   const [video, setVideo] = useState("");
   const [playList, setPlayList] = useState([]);
   const [volume, setVolume] = useState(0);
+  const [started, setStarted] = useState(false);
 
   const handleChange = e => {
     setSearch(e.target.value);
@@ -46,6 +47,13 @@ const Video = () => {
               </div>
           }
         </div>
+        <div className="video-player">
+          {
+            started ?
+              <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls={true} volume={volume}/>
+            : <div />
+          }
+        </div>
         <div className="video-search-bar">
           <Form onSubmit={getResults}>
             <InputGroup className="video-search">
@@ -61,13 +69,6 @@ const Video = () => {
               </Button>
             </InputGroup>
           </Form>
-        </div>
-        <div className="video-player">
-          {
-            video ?
-              <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls="true" volume={volume}/>
-            : <div />
-          }
         </div>
         <div className="search-results">
           {results ?

@@ -2262,6 +2262,11 @@ var Video = function Video() {
       volume = _useState10[0],
       setVolume = _useState10[1];
 
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState12 = _slicedToArray(_useState11, 2),
+      started = _useState12[0],
+      setStarted = _useState12[1];
+
   var handleChange = function handleChange(e) {
     setSearch(e.target.value);
   };
@@ -2288,6 +2293,14 @@ var Video = function Video() {
   }, "Choose a study material.")) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "When will you fall asleep?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
     className: "video-reminder"
   }, "In", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__.default, null), "minutes!"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    className: "video-player"
+  }, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
+    url: 'https://youtu.be/' + video,
+    width: "auto",
+    height: "13em",
+    controls: true,
+    volume: volume
+  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-search-bar"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, {
     onSubmit: getResults
@@ -2304,14 +2317,6 @@ var Video = function Video() {
     type: "submit",
     variant: "outline-dark"
   }, "Search")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "video-player"
-  }, video ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
-    url: 'https://youtu.be/' + video,
-    width: "auto",
-    height: "13em",
-    controls: "true",
-    volume: volume
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "search-results"
   }, results ? results.map(function (result) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
