@@ -43,25 +43,23 @@ const Video = () => {
                 <p className="video-reminder">Choose a study material.</p>
               </div>
             : <div>
-                <p>When will you fall asleep?</p>
-                <p className="video-reminder">In
-                <Form.Select
-                  aria-label="Timer"
-                  onChange={handleTimer}
-                >
-                  <option value="0">0</option>
-                  <option value="5">5</option>
-                  <option value="10">10</option>
-                  <option value="15">15</option>
-                  <option value="20">20</option>
-                  <option value="25">25</option>
-                  <option value="30">30</option>
-                </Form.Select>
-                minutes.</p>
-                <ToggleButton
-                  variant="outline-dark"
-                  onChange={(e) => console.log('you go girl', e)}
-                > Let's start.</ToggleButton>
+                <Form>
+                  <p>When will you fall asleep?</p>
+                  <p className="video-reminder">In
+                  <Form.Select
+                    aria-label="Timer"
+                    onChange={handleTimer}
+                  >
+                    <option value="">Choose</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                  </Form.Select>
+                  minutes.</p>
+                </Form>
               </div>
           }
         </div>
