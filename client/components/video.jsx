@@ -41,6 +41,48 @@ const Video = () => {
               <div>
                 <p>What are you studying tonight?</p>
                 <p className="video-reminder">Choose a study material.</p>
+                <div className="video-search-bar">
+                  <Form onSubmit={getResults}>
+                    <InputGroup className="video-search">
+                      <FormControl
+                        className="search-bar"
+                        onChange={handleSearch}
+                        placeholder="Search"
+                        area-label="Default"
+                        area-descibedby="inputGroup-sizing-default"
+                      />
+                      <Button className="search-button" type="submit" variant="outline-dark">
+                        Search
+                      </Button>
+                    </InputGroup>
+                  </Form>
+                </div>
+                <div className="search-results">
+                  {results ?
+                    results.map(result =>
+                      {
+                        return (
+                          <div className="results-video-info">
+                            <img className="video-thumbnail"
+                              src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/mqdefault.jpg"}
+                              onClick={() => {setVideo(result['id']['videoId'])}}
+                            />
+                            <div className="video-text-info">
+                              <div className="video-title"
+                                onClick={() => {setVideo(result['id']['videoId'])}}>
+                                {decode(result['snippet']['title'])}
+                              </div>
+                              <div className="video-channel">
+                                {decode(result['snippet']['channelTitle'])}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      }
+                    )
+                    : <div />
+                  }
+                </div>
               </div>
             : <div>
                 <Form>
@@ -70,48 +112,7 @@ const Video = () => {
             : <div />
           }
         </div>
-        <div className="video-search-bar">
-          <Form onSubmit={getResults}>
-            <InputGroup className="video-search">
-              <FormControl
-                className="search-bar"
-                onChange={handleSearch}
-                placeholder="Search"
-                area-label="Default"
-                area-descibedby="inputGroup-sizing-default"
-              />
-              <Button className="search-button" type="submit" variant="outline-dark">
-                Search
-              </Button>
-            </InputGroup>
-          </Form>
-        </div>
-        <div className="search-results">
-          {results ?
-            results.map(result =>
-              {
-                return (
-                  <div className="results-video-info">
-                    <img className="video-thumbnail"
-                      src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/mqdefault.jpg"}
-                      onClick={() => {setVideo(result['id']['videoId'])}}
-                    />
-                    <div className="video-text-info">
-                      <div className="video-title"
-                        onClick={() => {setVideo(result['id']['videoId'])}}>
-                        {decode(result['snippet']['title'])}
-                      </div>
-                      <div className="video-channel">
-                        {decode(result['snippet']['channelTitle'])}
-                      </div>
-                    </div>
-                  </div>
-                );
-              }
-            )
-            : <div />
-          }
-        </div>
+
         <div className="playlist-no-longin">
           Login for access to more features
         </div>
