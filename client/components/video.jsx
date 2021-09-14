@@ -3,20 +3,22 @@ import axios from 'axios';
 import { Image, InputGroup, FormControl, Button, Form } from "react-bootstrap";
 import ReactPlayer from 'react-player';
 import {decode} from 'html-entities';
-// import {Howl, Howler} from 'howler';
-
+import Timer from './timer.jsx';
 
 const Video = () => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [video, setVideo] = useState("");
-  const [playList, setPlayList] = useState([]);
+  // const [playList, setPlayList] = useState([]);
   const [volume, setVolume] = useState(0);
   const [time, setTime] = useState();
   const [started, setStarted] = useState(false);
 
-  const handleChange = e => {
+  const handleSearch = e => {
     setSearch(e.target.value);
+  };
+  const handleTimer = e => {
+    setTime(e.target.value);
   };
   const getResults = e => {
     e.preventDefault();
@@ -43,14 +45,17 @@ const Video = () => {
             : <div>
                 <p>When will you fall asleep?</p>
                 <p className="video-reminder">In
-                <Form.Select aria-label="Floating label select example">
-                  <option>...</option>
-                  {/* <option value="5" onSelect={setTime(5)}>5</option>
-                  <option value="10" onSelect={setTime(10)}>10</option>
-                  <option value="15" onSelect={setTime(15)}>15</option>
-                  <option value="20" onSelect={setTime(20)}>20</option>
-                  <option value="25" onSelect={setTime(25)}>25</option>
-                  <option value="30" onSelect={setTime(30)}>30</option> */}
+                <Form.Select
+                  aria-label="Timer"
+                  onChange={handleTimer}
+                >
+                  <option>Select Time</option>
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="15">15</option>
+                  <option value="20">20</option>
+                  <option value="25">25</option>
+                  <option value="30">30</option>
                 </Form.Select>
                 minutes!</p>
               </div>
@@ -68,7 +73,7 @@ const Video = () => {
             <InputGroup className="video-search">
               <FormControl
                 className="search-bar"
-                onChange={handleChange}
+                onChange={handleSearch}
                 placeholder="Search"
                 area-label="Default"
                 area-descibedby="inputGroup-sizing-default"
