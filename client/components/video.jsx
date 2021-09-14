@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import { Image, InputGroup, FormControl, Button, Form } from "react-bootstrap";
+import { Image, InputGroup, FormControl, Button, ToggleButton, Form } from "react-bootstrap";
 import ReactPlayer from 'react-player';
 import {decode} from 'html-entities';
 import Timer from './timer.jsx';
@@ -11,14 +11,14 @@ const Video = () => {
   const [video, setVideo] = useState("");
   // const [playList, setPlayList] = useState([]);
   const [volume, setVolume] = useState(0);
-  const [time, setTime] = useState();
+  const [time, setTime] = useState(0);
   const [started, setStarted] = useState(false);
 
   const handleSearch = e => {
     setSearch(e.target.value);
   };
   const handleTimer = e => {
-    setTime(e.target.value);
+    setTime(parseInt(e.target.value));
   };
   const getResults = e => {
     e.preventDefault();
@@ -49,7 +49,7 @@ const Video = () => {
                   aria-label="Timer"
                   onChange={handleTimer}
                 >
-                  <option>Select Time</option>
+                  <option value="0">0</option>
                   <option value="5">5</option>
                   <option value="10">10</option>
                   <option value="15">15</option>
@@ -57,7 +57,11 @@ const Video = () => {
                   <option value="25">25</option>
                   <option value="30">30</option>
                 </Form.Select>
-                minutes!</p>
+                minutes.</p>
+                <ToggleButton
+                  variant="outline-dark"
+                  onChange={(e) => console.log('you go girl', e)}
+                > Let's start.</ToggleButton>
               </div>
           }
         </div>
