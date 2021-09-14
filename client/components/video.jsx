@@ -36,6 +36,7 @@ const Video = () => {
       <div className="video-empty-space"></div>
       <div className="video-search-window">
         <div className="video-description">
+
           {
             !video ?
               <div>
