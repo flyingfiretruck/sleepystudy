@@ -30,81 +30,85 @@ const Video = () => {
         console.log(err);
       });
   }
+  let mainScreen;
+
+  if(!video) {
+    mainScreen =
+    <div>
+    <p>What are you studying tonight?</p>
+    <p className="video-reminder">Choose a study material.</p>
+    <div className="video-search-bar">
+      <Form onSubmit={getResults}>
+        <InputGroup className="video-search">
+          <FormControl
+            className="search-bar"
+            onChange={handleSearch}
+            placeholder="Search"
+            area-label="Default"
+            area-descibedby="inputGroup-sizing-default"
+          />
+          <Button className="search-button" type="submit" variant="outline-dark">
+            Search
+          </Button>
+        </InputGroup>
+      </Form>
+    </div>
+    <div className="search-results">
+      {results ?
+        results.map(result =>
+          {
+            return (
+              <div className="results-video-info">
+                <img className="video-thumbnail"
+                  src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/mqdefault.jpg"}
+                  onClick={() => {setVideo(result['id']['videoId'])}}
+                />
+                <div className="video-text-info">
+                  <div className="video-title"
+                    onClick={() => {setVideo(result['id']['videoId'])}}>
+                    {decode(result['snippet']['title'])}
+                  </div>
+                  <div className="video-channel">
+                    {decode(result['snippet']['channelTitle'])}
+                  </div>
+                </div>
+              </div>
+            );
+          }
+        )
+        : <div />
+      }
+    </div>
+  </div>
+  } else {
+    mainScreen =
+    <div>
+      <Form>
+        <p>When will you fall asleep?</p>
+        <p className="video-reminder">In
+        <Form.Select
+          aria-label="Timer"
+          onChange={handleTimer}
+        >
+          <option value="">...</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+        </Form.Select>
+        minutes.</p>
+      </Form>
+    </div>
+  }
 
   return (
     <div className="video">
       <div className="video-empty-space"></div>
       <div className="video-search-window">
         <div className="video-description">
-
-          {
-            !video ?
-              <div>
-                <p>What are you studying tonight?</p>
-                <p className="video-reminder">Choose a study material.</p>
-                <div className="video-search-bar">
-                  <Form onSubmit={getResults}>
-                    <InputGroup className="video-search">
-                      <FormControl
-                        className="search-bar"
-                        onChange={handleSearch}
-                        placeholder="Search"
-                        area-label="Default"
-                        area-descibedby="inputGroup-sizing-default"
-                      />
-                      <Button className="search-button" type="submit" variant="outline-dark">
-                        Search
-                      </Button>
-                    </InputGroup>
-                  </Form>
-                </div>
-                <div className="search-results">
-                  {results ?
-                    results.map(result =>
-                      {
-                        return (
-                          <div className="results-video-info">
-                            <img className="video-thumbnail"
-                              src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/mqdefault.jpg"}
-                              onClick={() => {setVideo(result['id']['videoId'])}}
-                            />
-                            <div className="video-text-info">
-                              <div className="video-title"
-                                onClick={() => {setVideo(result['id']['videoId'])}}>
-                                {decode(result['snippet']['title'])}
-                              </div>
-                              <div className="video-channel">
-                                {decode(result['snippet']['channelTitle'])}
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      }
-                    )
-                    : <div />
-                  }
-                </div>
-              </div>
-            : <div>
-                <Form>
-                  <p>When will you fall asleep?</p>
-                  <p className="video-reminder">In
-                  <Form.Select
-                    aria-label="Timer"
-                    onChange={handleTimer}
-                  >
-                    <option value="">Choose</option>
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="15">15</option>
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                    <option value="30">30</option>
-                  </Form.Select>
-                  minutes.</p>
-                </Form>
-              </div>
-          }
+          {hello}
         </div>
         <div className="video-player">
           {
