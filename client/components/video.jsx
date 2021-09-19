@@ -80,6 +80,9 @@ const Video = () => {
       }
     </div>
   </div>
+  }
+  if (video && (timer !== 0 || timer !== NaN)) {
+    <div>doggo</div>
   } else {
     mainScreen =
     <div>
@@ -108,7 +111,7 @@ const Video = () => {
       <div className="video-empty-space"></div>
       <div className="video-search-window">
         <div className="video-description">
-          {hello}
+          {mainScreen}
         </div>
         <div className="video-player">
           {

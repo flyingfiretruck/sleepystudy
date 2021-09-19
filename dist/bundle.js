@@ -2330,6 +2330,11 @@ var Video = function Video() {
         className: "video-channel"
       }, (0,html_entities__WEBPACK_IMPORTED_MODULE_3__.decode)(result['snippet']['channelTitle']))));
     }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)));
+  }
+
+  if (video && (timer !== 0 || timer !== NaN)) {
+    /*#__PURE__*/
+    react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "doggo");
   } else {
     mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "When will you fall asleep?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
       className: "video-reminder"
@@ -2361,7 +2366,7 @@ var Video = function Video() {
     className: "video-search-window"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-description"
-  }, hello), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  }, mainScreen), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-player"
   }, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
     url: 'https://youtu.be/' + video,
