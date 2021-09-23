@@ -2333,7 +2333,7 @@ var Video = function Video() {
   }
 
   if (video && (time !== 0 || time !== NaN)) {
-    mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "doggo");
+    mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Sleep tight! Your studying will start when you're ready :)");
   }
 
   if (video && !time) {

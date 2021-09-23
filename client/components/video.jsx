@@ -83,7 +83,7 @@ const Video = () => {
   }
   if (video && (time !== 0 || time !== NaN)) {
     mainScreen =
-    <div>doggo</div>
+    <div>Sleep tight! Your studying will start when you're ready :)</div>
   }
   if (video && !time) {
     mainScreen =
