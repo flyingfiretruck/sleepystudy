@@ -81,9 +81,11 @@ const Video = () => {
     </div>
   </div>
   }
-  if (video && (timer !== 0 || timer !== NaN)) {
+  if (video && (time !== 0 || time !== NaN)) {
+    mainScreen =
     <div>doggo</div>
-  } else {
+  }
+  if (video && !time) {
     mainScreen =
     <div>
       <Form>

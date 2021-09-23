@@ -2332,10 +2332,11 @@ var Video = function Video() {
     }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)));
   }
 
-  if (video && (timer !== 0 || timer !== NaN)) {
-    /*#__PURE__*/
-    react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "doggo");
-  } else {
+  if (video && (time !== 0 || time !== NaN)) {
+    mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "doggo");
+  }
+
+  if (video && !time) {
     mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "When will you fall asleep?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
       className: "video-reminder"
     }, "In", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__.default.Select, {
