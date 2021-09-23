@@ -8,7 +8,7 @@ import Timer from './timer.jsx';
 const Video = () => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
-  const [video, setVideo] = useState("");
+  const [video, setVideo] = useState("uX4wJeGc7tU");
   const [videoChannel, setVideoChannel] = useState("");
   const [videoTitle, setVideoTitle] = useState("");
   const [volume, setVolume] = useState(0);
@@ -96,7 +96,7 @@ const Video = () => {
           <img className="study-video-thumbnail" src={"https://img.youtube.com/vi/" + video + "/mqdefault.jpg"}></img>
           <div className="study-video-title">{videoTitle}</div>
           <div className="study-video-channel">{videoChannel}</div>
-          <Button onChange={()=>{setVideo(''), setVideoTitle(''), setVideoChannel('')}} variant="outline-dark">Change Video</Button>
+          <Button onClick={()=>{setVideo(''), setVideoTitle(''), setVideoChannel('')}} variant="outline-dark">Change Video</Button>
         </div>
       </div>
     }

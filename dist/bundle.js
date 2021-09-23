@@ -2249,7 +2249,7 @@ var Video = function Video() {
       results = _useState4[0],
       setResults = _useState4[1];
 
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("uX4wJeGc7tU"),
       _useState6 = _slicedToArray(_useState5, 2),
       video = _useState6[0],
       setVideo = _useState6[1];
@@ -2364,7 +2364,7 @@ var Video = function Video() {
     }, videoTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "study-video-channel"
     }, videoChannel), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
-      onChange: function onChange() {
+      onClick: function onClick() {
         setVideo(''), setVideoTitle(''), setVideoChannel('');
       },
       variant: "outline-dark"
