@@ -59,6 +59,15 @@
   padding-bottom: 7.5%
 }
 
+.study-video-header {
+  font-size: 1em;
+}
+
+.study-video-info {
+  display: flex;
+  font-size: 0.4em;
+}
+
 .video-text-info {
   display: flex;
   flex-direction: column;

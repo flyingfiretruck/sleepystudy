@@ -9,8 +9,8 @@ const Video = () => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [video, setVideo] = useState("uX4wJeGc7tU");
-  const [videoChannel, setVideoChannel] = useState("");
-  const [videoTitle, setVideoTitle] = useState("");
+  const [videoChannel, setVideoChannel] = useState("K'eyush The Stunt Dog");
+  const [videoTitle, setVideoTitle] = useState("This Puppy LOVES My Husky, But He Blanks Her!");
   const [volume, setVolume] = useState(0);
   const [time, setTime] = useState(0);
   const [started, setStarted] = useState(false);
@@ -84,19 +84,28 @@ const Video = () => {
   }
   if (video && (time !== 0 || time !== NaN)) {
     mainScreen =
-    <div className="video-player">
+    <div>
     {
       started ?
+      <div className="video-player">
         <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls={true} volume={volume}/>
+      </div>
       :
       <div>
         <div className="pre-video-message">Sleep tight! Your studying will begin when you are ready :)</div>
-        <div className="study-video-description">
-          <div className="study-video-header">Your study material is:</div>
-          <img className="study-video-thumbnail" src={"https://img.youtube.com/vi/" + video + "/mqdefault.jpg"}></img>
-          <div className="study-video-title">{videoTitle}</div>
-          <div className="study-video-channel">{videoChannel}</div>
-          <Button onClick={()=>{setVideo(''), setVideoTitle(''), setVideoChannel('')}} variant="outline-dark">Change Video</Button>
+        <div className="study-video-header">Your study material is:</div>
+        <div className="study-video-info">
+          <img className="video-thumbnail" src={"https://img.youtube.com/vi/" + video + "/mqdefault.jpg"}></img>
+          <div className="study-video-text-info">
+            <div className="video-title">{videoTitle}</div>
+            <div className="video-channel">{videoChannel}</div>
+            <Button
+            onClick={()=>{setVideo(''), setVideoTitle(''), setVideoChannel('')}}
+            variant="outline-dark"
+            >
+              Change Video
+            </Button>
+          </div>
         </div>
       </div>
     }

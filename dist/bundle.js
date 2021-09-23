@@ -2254,12 +2254,12 @@ var Video = function Video() {
       video = _useState6[0],
       setVideo = _useState6[1];
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("K'eyush The Stunt Dog"),
       _useState8 = _slicedToArray(_useState7, 2),
       videoChannel = _useState8[0],
       setVideoChannel = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)("This Puppy LOVES My Husky, But He Blanks Her!"),
       _useState10 = _slicedToArray(_useState9, 2),
       videoTitle = _useState10[0],
       setVideoTitle = _useState10[1];
@@ -2342,33 +2342,35 @@ var Video = function Video() {
   }
 
   if (video && (time !== 0 || time !== NaN)) {
-    mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "video-player"
-    }, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
       url: 'https://youtu.be/' + video,
       width: "auto",
       height: "13em",
       controls: true,
       volume: volume
-    }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+    })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "pre-video-message"
     }, "Sleep tight! Your studying will begin when you are ready :)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "study-video-description"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "study-video-header"
-    }, "Your study material is:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-      className: "study-video-thumbnail",
+    }, "Your study material is:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "study-video-info"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      className: "video-thumbnail",
       src: "https://img.youtube.com/vi/" + video + "/mqdefault.jpg"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "study-video-title"
+      className: "study-video-text-info"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "video-title"
     }, videoTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-      className: "study-video-channel"
+      className: "video-channel"
     }, videoChannel), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
       onClick: function onClick() {
         setVideo(''), setVideoTitle(''), setVideoChannel('');
       },
       variant: "outline-dark"
-    }, "Change Video"))));
+    }, "Change Video")))));
   }
 
   if (video && !time) {
@@ -2613,7 +2615,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".video {\n  background-color: #F7EBEB;\n}\n.video-empty-space {\n  padding: 5%;\n  min-height: 4em;\n}\n\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-search-window {\n  max-width: 1250px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.playlist-no-longin {\n  padding: 5%;\n  padding-top: 40%;\n  padding-bottom: 40%;\n  min-height: 4em;\n  text-align: center;\n}\n\n.video-search {\n  padding-left: 20%;\n  padding-right: 20%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.search-results {\n  font-size: 15px;\n  display: flex;\n  flex-direction: column;\n  margin-left: 12.5%;\n  margin-right: 12.5%;\n  margin-top: 7.5%;\n}\n\n.results-video-info {\n  display: flex;\n  padding-bottom: 7.5%\n}\n\n.video-text-info {\n  display: flex;\n  flex-direction: column;\n}\n\n.video-channel {\n  font-size: 1em;\n}\n\n.video-thumbnail {\n  width: 380px;\n  height: 200px;\n  /* width: 320px;\n  height: 180px; */\n  padding-right: 1em;\n  object-fit: cover;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}\n", "",{"version":3,"sources":["webpack://./client/stylesheets/video.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;AAC3B;AACA;EACE,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,gBAAgB;EAChB,mBAAmB;EACnB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,UAAU;EACV,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,kBAAkB;EAClB,mBAAmB;EACnB,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb;AACF;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb;kBACgB;EAChB,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,kCAAkC;AACpC","sourcesContent":[".video {\n  background-color: #F7EBEB;\n}\n.video-empty-space {\n  padding: 5%;\n  min-height: 4em;\n}\n\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-search-window {\n  max-width: 1250px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.playlist-no-longin {\n  padding: 5%;\n  padding-top: 40%;\n  padding-bottom: 40%;\n  min-height: 4em;\n  text-align: center;\n}\n\n.video-search {\n  padding-left: 20%;\n  padding-right: 20%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.search-results {\n  font-size: 15px;\n  display: flex;\n  flex-direction: column;\n  margin-left: 12.5%;\n  margin-right: 12.5%;\n  margin-top: 7.5%;\n}\n\n.results-video-info {\n  display: flex;\n  padding-bottom: 7.5%\n}\n\n.video-text-info {\n  display: flex;\n  flex-direction: column;\n}\n\n.video-channel {\n  font-size: 1em;\n}\n\n.video-thumbnail {\n  width: 380px;\n  height: 200px;\n  /* width: 320px;\n  height: 180px; */\n  padding-right: 1em;\n  object-fit: cover;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".video {\n  background-color: #F7EBEB;\n}\n.video-empty-space {\n  padding: 5%;\n  min-height: 4em;\n}\n\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-search-window {\n  max-width: 1250px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.playlist-no-longin {\n  padding: 5%;\n  padding-top: 40%;\n  padding-bottom: 40%;\n  min-height: 4em;\n  text-align: center;\n}\n\n.video-search {\n  padding-left: 20%;\n  padding-right: 20%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.search-results {\n  font-size: 15px;\n  display: flex;\n  flex-direction: column;\n  margin-left: 12.5%;\n  margin-right: 12.5%;\n  margin-top: 7.5%;\n}\n\n.results-video-info {\n  display: flex;\n  padding-bottom: 7.5%\n}\n\n.study-video-header {\n  font-size: 1em;\n}\n\n.study-video-info {\n  display: flex;\n  font-size: 0.4em;\n}\n\n.video-text-info {\n  display: flex;\n  flex-direction: column;\n}\n\n.video-channel {\n  font-size: 1em;\n}\n\n.video-thumbnail {\n  width: 380px;\n  height: 200px;\n  /* width: 320px;\n  height: 180px; */\n  padding-right: 1em;\n  object-fit: cover;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}\n", "",{"version":3,"sources":["webpack://./client/stylesheets/video.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;AAC3B;AACA;EACE,WAAW;EACX,eAAe;AACjB;;AAEA;EACE,kBAAkB;EAClB,SAAS;AACX;;AAEA;EACE,iBAAiB;EACjB,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,gBAAgB;EAChB,mBAAmB;EACnB,eAAe;EACf,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,WAAW;EACX,iBAAiB;EACjB,kBAAkB;AACpB;;AAEA;EACE,UAAU;EACV,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;AACnB;;AAEA;EACE,eAAe;EACf,aAAa;EACb,sBAAsB;EACtB,kBAAkB;EAClB,mBAAmB;EACnB,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb;AACF;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,aAAa;EACb,gBAAgB;AAClB;;AAEA;EACE,aAAa;EACb,sBAAsB;AACxB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,YAAY;EACZ,aAAa;EACb;kBACgB;EAChB,kBAAkB;EAClB,iBAAiB;AACnB;;AAEA;EACE,kCAAkC;AACpC;;AAEA;EACE,oCAAoC;AACtC;;AAEA;EACE,kCAAkC;AACpC","sourcesContent":[".video {\n  background-color: #F7EBEB;\n}\n.video-empty-space {\n  padding: 5%;\n  min-height: 4em;\n}\n\n.door-image {\n  position: relative;\n  bottom: 0;\n}\n\n.video-search-window {\n  max-width: 1250px;\n  margin-left: auto;\n  margin-right: auto;\n}\n\n.playlist-no-longin {\n  padding: 5%;\n  padding-top: 40%;\n  padding-bottom: 40%;\n  min-height: 4em;\n  text-align: center;\n}\n\n.video-search {\n  padding-left: 20%;\n  padding-right: 20%;\n}\n\n.video-player {\n  padding: 5%;\n  padding-left: 10%;\n  padding-right: 10%;\n}\n\n.video-description {\n  margin: 2%;\n  font-size: 1.3em;\n}\n\n.video-reminder {\n  font-size: 0.75em;\n}\n\n.search-results {\n  font-size: 15px;\n  display: flex;\n  flex-direction: column;\n  margin-left: 12.5%;\n  margin-right: 12.5%;\n  margin-top: 7.5%;\n}\n\n.results-video-info {\n  display: flex;\n  padding-bottom: 7.5%\n}\n\n.study-video-header {\n  font-size: 1em;\n}\n\n.study-video-info {\n  display: flex;\n  font-size: 0.4em;\n}\n\n.video-text-info {\n  display: flex;\n  flex-direction: column;\n}\n\n.video-channel {\n  font-size: 1em;\n}\n\n.video-thumbnail {\n  width: 380px;\n  height: 200px;\n  /* width: 320px;\n  height: 180px; */\n  padding-right: 1em;\n  object-fit: cover;\n}\n\n.btn {\n  background-color: white !important;\n}\n\n.btn-outline-dark:hover {\n  background-color: #212529 !important;\n}\n\n.search-bar {\n  border: 1px solid black !important;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
