@@ -9,7 +9,8 @@ const Video = () => {
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [video, setVideo] = useState("");
-  // const [playList, setPlayList] = useState([]);
+  const [videoChannel, setVideoChannel] = useState("");
+  const [videoTitle, setVideoTitle] = useState("");
   const [volume, setVolume] = useState(0);
   const [time, setTime] = useState(0);
   const [started, setStarted] = useState(false);
@@ -61,11 +62,11 @@ const Video = () => {
               <div className="results-video-info">
                 <img className="video-thumbnail"
                   src={"https://img.youtube.com/vi/" + result['id']['videoId'] + "/mqdefault.jpg"}
-                  onClick={() => {setVideo(result['id']['videoId'])}}
+                  onClick={() => {setVideo(result['id']['videoId']), setVideoTitle(decode(result['snippet']['title'])), setVideoChannel(decode(result['snippet']['channelTitle']))}}
                 />
                 <div className="video-text-info">
                   <div className="video-title"
-                    onClick={() => {setVideo(result['id']['videoId'])}}>
+                    onClick={() => {setVideo(result['id']['videoId']), setVideoTitle(decode(result['snippet']['title'])), setVideoChannel(decode(result['snippet']['channelTitle']))}}>
                     {decode(result['snippet']['title'])}
                   </div>
                   <div className="video-channel">
@@ -83,7 +84,22 @@ const Video = () => {
   }
   if (video && (time !== 0 || time !== NaN)) {
     mainScreen =
-    <div>Sleep tight! Your studying will start when you're ready :)</div>
+    <div className="video-player">
+    {
+      started ?
+        <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls={true} volume={volume}/>
+      :
+      <div>
+        <div className="pre-video-message">Sleep tight! Your studying will begin when you are ready :)</div>
+        <div className="study-video-description">
+          <div className="study-video-header">Your study material is:</div>
+          <img className="study-video-thumbnail" src={"https://img.youtube.com/vi/" + video + "/mqdefault.jpg"}></img>
+          <div className="study-video-title">{videoTitle}</div>
+          <div className="study-video-channel">{videoChannel}</div>
+        </div>
+      </div>
+    }
+    </div>
   }
   if (video && !time) {
     mainScreen =
@@ -115,14 +131,6 @@ const Video = () => {
         <div className="video-description">
           {mainScreen}
         </div>
-        <div className="video-player">
-          {
-            started ?
-              <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls={true} volume={volume}/>
-            : <div />
-          }
-        </div>
-
         <div className="playlist-no-longin">
           Login for access to more features
         </div>

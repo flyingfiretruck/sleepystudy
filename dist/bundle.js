@@ -2252,23 +2252,32 @@ var Video = function Video() {
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState6 = _slicedToArray(_useState5, 2),
       video = _useState6[0],
-      setVideo = _useState6[1]; // const [playList, setPlayList] = useState([]);
+      setVideo = _useState6[1];
 
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState8 = _slicedToArray(_useState7, 2),
-      volume = _useState8[0],
-      setVolume = _useState8[1];
+      videoChannel = _useState8[0],
+      setVideoChannel = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState10 = _slicedToArray(_useState9, 2),
-      time = _useState10[0],
-      setTime = _useState10[1];
+      videoTitle = _useState10[0],
+      setVideoTitle = _useState10[1];
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
       _useState12 = _slicedToArray(_useState11, 2),
-      started = _useState12[0],
-      setStarted = _useState12[1];
+      volume = _useState12[0],
+      setVolume = _useState12[1];
+
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(0),
+      _useState14 = _slicedToArray(_useState13, 2),
+      time = _useState14[0],
+      setTime = _useState14[1];
+
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false),
+      _useState16 = _slicedToArray(_useState15, 2),
+      started = _useState16[0],
+      setStarted = _useState16[1];
 
   var handleSearch = function handleSearch(e) {
     setSearch(e.target.value);
@@ -2317,14 +2326,14 @@ var Video = function Video() {
         className: "video-thumbnail",
         src: "https://img.youtube.com/vi/" + result['id']['videoId'] + "/mqdefault.jpg",
         onClick: function onClick() {
-          setVideo(result['id']['videoId']);
+          setVideo(result['id']['videoId']), setVideoTitle((0,html_entities__WEBPACK_IMPORTED_MODULE_3__.decode)(result['snippet']['title'])), setVideoChannel((0,html_entities__WEBPACK_IMPORTED_MODULE_3__.decode)(result['snippet']['channelTitle']));
         }
       }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "video-text-info"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "video-title",
         onClick: function onClick() {
-          setVideo(result['id']['videoId']);
+          setVideo(result['id']['videoId']), setVideoTitle((0,html_entities__WEBPACK_IMPORTED_MODULE_3__.decode)(result['snippet']['title'])), setVideoChannel((0,html_entities__WEBPACK_IMPORTED_MODULE_3__.decode)(result['snippet']['channelTitle']));
         }
       }, (0,html_entities__WEBPACK_IMPORTED_MODULE_3__.decode)(result['snippet']['title'])), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
         className: "video-channel"
@@ -2333,7 +2342,28 @@ var Video = function Video() {
   }
 
   if (video && (time !== 0 || time !== NaN)) {
-    mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Sleep tight! Your studying will start when you're ready :)");
+    mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "video-player"
+    }, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
+      url: 'https://youtu.be/' + video,
+      width: "auto",
+      height: "13em",
+      controls: true,
+      volume: volume
+    }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "pre-video-message"
+    }, "Sleep tight! Your studying will begin when you are ready :)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "study-video-description"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "study-video-header"
+    }, "Your study material is:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+      className: "study-video-thumbnail",
+      src: "https://img.youtube.com/vi/" + video + "/mqdefault.jpg"
+    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "study-video-title"
+    }, videoTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+      className: "study-video-channel"
+    }, videoChannel))));
   }
 
   if (video && !time) {
@@ -2368,14 +2398,6 @@ var Video = function Video() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "video-description"
   }, mainScreen), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    className: "video-player"
-  }, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
-    url: 'https://youtu.be/' + video,
-    width: "auto",
-    height: "13em",
-    controls: true,
-    volume: volume
-  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "playlist-no-longin"
   }, "Login for access to more features")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__.default, {
     className: "door-image",
