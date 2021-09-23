@@ -96,6 +96,7 @@ const Video = () => {
           <img className="study-video-thumbnail" src={"https://img.youtube.com/vi/" + video + "/mqdefault.jpg"}></img>
           <div className="study-video-title">{videoTitle}</div>
           <div className="study-video-channel">{videoChannel}</div>
+          <Button onChange={()=>{setVideo(''), setVideoTitle(''), setVideoChannel('')}} variant="outline-dark">Change Video</Button>
         </div>
       </div>
     }

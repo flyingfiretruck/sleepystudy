@@ -2363,7 +2363,12 @@ var Video = function Video() {
       className: "study-video-title"
     }, videoTitle), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "study-video-channel"
-    }, videoChannel))));
+    }, videoChannel), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__.default, {
+      onChange: function onChange() {
+        setVideo(''), setVideoTitle(''), setVideoChannel('');
+      },
+      variant: "outline-dark"
+    }, "Change Video"))));
   }
 
   if (video && !time) {
