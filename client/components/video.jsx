@@ -84,9 +84,16 @@ const Video = () => {
   }
   if (video && time > 0) {
     const setTimer = setInterval(() => {
-      setStarted(true)
-    }, 60000 * time + 4140000);
-
+      setStarted(true), setVolume(0.1)
+    }, 1000 * time);
+    // 60000 * time + 4140000);
+    if (volume === 0.1) {
+      while (volume !== 1) {
+        const crankVolume = setInterval(() => {
+          setVolume(volume += 0.1)
+        }, 5000);
+      }
+    }
     mainScreen =
     <div>
     {

@@ -2231,6 +2231,8 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
+function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
+
 
 
 
@@ -2343,8 +2345,17 @@ var Video = function Video() {
 
   if (video && time > 0) {
     var setTimer = setInterval(function () {
-      setStarted(true);
-    }, 60000 * time + 4140000);
+      setStarted(true), setVolume(0.1);
+    }, 1000 * time); // 60000 * time + 4140000);
+
+    if (volume === 0.1) {
+      while (volume !== 1) {
+        var crankVolume = setInterval(function () {
+          setVolume((volume + 0.1, _readOnlyError("volume")));
+        }, 5000);
+      }
+    }
+
     mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "video-player"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
