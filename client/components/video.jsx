@@ -6,7 +6,6 @@ import {decode} from 'html-entities';
 import Timer from './timer.jsx';
 
 const Video = () => {
-  let timerOff = false;
   let mainScreen;
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
@@ -93,7 +92,7 @@ const Video = () => {
     {
       started ?
       <div className="video-player">
-        <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' controls={true} volume={volume}/>
+        <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' playing={true} controls={true} volume={volume}/>
       </div>
       :
       <div>

@@ -2239,7 +2239,6 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Video = function Video() {
-  var timerOff = false;
   var mainScreen;
 
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
@@ -2352,6 +2351,7 @@ var Video = function Video() {
       url: 'https://youtu.be/' + video,
       width: "auto",
       height: "13em",
+      playing: true,
       controls: true,
       volume: volume
     })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
