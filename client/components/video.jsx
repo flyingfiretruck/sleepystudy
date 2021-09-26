@@ -83,23 +83,28 @@ const Video = () => {
   </div>
   }
   if (video && time > 0) {
-    const setTimer = setInterval(() => {
+    const setTimer = setTimeout(() => {
       setStarted(true), setVolume(0.1)
     }, 1000 * time);
     // 60000 * time + 4140000);
-    if (volume === 0.1) {
-      while (volume !== 1) {
-        const crankVolume = setInterval(() => {
-          setVolume(volume += 0.1)
-        }, 5000);
-      }
-    }
+
     mainScreen =
     <div>
     {
       started ?
       <div className="video-player">
-        <ReactPlayer url={'https://youtu.be/' + video} width="auto" height='13em' playing={true} controls={true} volume={volume}/>
+        <ReactPlayer
+          url={'https://youtu.be/' + video}
+          width="auto" height='13em'
+          playing={true}
+          controls={true}
+          volume={volume}
+          onStart={
+            setTimeout(() => {
+              setVolume(0.5), 10000
+            })
+          }
+        />
       </div>
       :
       <div>
