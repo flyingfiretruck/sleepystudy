@@ -87,7 +87,7 @@ const Video = () => {
       setStarted(true), setVolume(0.1)
     }, 1000 * time);
     // 60000 * time + 4140000);
-
+    // clearTimeout(setTimer);
     mainScreen =
     <div>
     {
@@ -99,11 +99,11 @@ const Video = () => {
           playing={true}
           controls={true}
           volume={volume}
-          onStart={
-            setTimeout(() => {
-              setVolume(0.5), 10000
-            })
-          }
+          // onStart={
+          //   setTimeout(() => {
+          //     setVolume(0.5), 100000
+          //   })
+          // }
         />
       </div>
       :

@@ -2345,6 +2345,7 @@ var Video = function Video() {
     var setTimer = setTimeout(function () {
       setStarted(true), setVolume(0.1);
     }, 1000 * time); // 60000 * time + 4140000);
+    // clearTimeout(setTimer);
 
     mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "video-player"
@@ -2354,10 +2355,12 @@ var Video = function Video() {
       height: "13em",
       playing: true,
       controls: true,
-      volume: volume,
-      onStart: setTimeout(function () {
-        setVolume(0.5), 10000;
-      })
+      volume: volume // onStart={
+      //   setTimeout(() => {
+      //     setVolume(0.5), 100000
+      //   })
+      // }
+
     })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "pre-video-message"
     }, "Sleep tight! Your studying will begin when you are ready :)"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
