@@ -6,6 +6,8 @@ import {decode} from 'html-entities';
 import Timer from './timer.jsx';
 
 const Video = () => {
+  let timerOff = false;
+  let mainScreen;
   const [search, setSearch] = useState("");
   const [results, setResults] = useState([]);
   const [video, setVideo] = useState("uX4wJeGc7tU");
@@ -31,7 +33,6 @@ const Video = () => {
         console.log(err);
       });
   }
-  let mainScreen;
 
   if(!video) {
     mainScreen =
@@ -82,7 +83,11 @@ const Video = () => {
     </div>
   </div>
   }
-  if (video && (time !== 0 || time !== NaN)) {
+  if (video && time > 0) {
+    const setTimer = setInterval(() => {
+      setStarted(true)
+    }, 60000 * time);
+
     mainScreen =
     <div>
     {
@@ -103,7 +108,7 @@ const Video = () => {
             onClick={()=>{setVideo(''), setVideoTitle(''), setVideoChannel('')}}
             variant="outline-dark"
             >
-              Change Video
+              Reset
             </Button>
           </div>
         </div>
@@ -122,6 +127,7 @@ const Video = () => {
           onChange={handleTimer}
         >
           <option value="">...</option>
+          <option value="1">1</option>
           <option value="5">5</option>
           <option value="10">10</option>
           <option value="15">15</option>

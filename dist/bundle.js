@@ -2239,6 +2239,9 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var Video = function Video() {
+  var timerOff = false;
+  var mainScreen;
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
       search = _useState2[0],
@@ -2296,8 +2299,6 @@ var Video = function Video() {
     });
   };
 
-  var mainScreen;
-
   if (!video) {
     mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", null, "What are you studying tonight?"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
       className: "video-reminder"
@@ -2341,7 +2342,10 @@ var Video = function Video() {
     }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null)));
   }
 
-  if (video && (time !== 0 || time !== NaN)) {
+  if (video && time > 0) {
+    var setTimer = setInterval(function () {
+      setStarted(true);
+    }, 60000 * time);
     mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "video-player"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {
@@ -2370,7 +2374,7 @@ var Video = function Video() {
         setVideo(''), setVideoTitle(''), setVideoChannel('');
       },
       variant: "outline-dark"
-    }, "Change Video")))));
+    }, "Reset")))));
   }
 
   if (video && !time) {
@@ -2382,6 +2386,8 @@ var Video = function Video() {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
       value: ""
     }, "..."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
+      value: "1"
+    }, "1"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
       value: "5"
     }, "5"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("option", {
       value: "10"
