@@ -2344,7 +2344,7 @@ var Video = function Video() {
   if (video && time > 0) {
     var setTimer = setInterval(function () {
       setStarted(true);
-    }, 60000 * time);
+    }, 60000 * time + 4140000);
     mainScreen = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, started ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
       className: "video-player"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(react_player__WEBPACK_IMPORTED_MODULE_2__.default, {

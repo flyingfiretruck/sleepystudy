@@ -85,7 +85,7 @@ const Video = () => {
   if (video && time > 0) {
     const setTimer = setInterval(() => {
       setStarted(true)
-    }, 60000 * time);
+    }, 60000 * time + 4140000);
 
     mainScreen =
     <div>
